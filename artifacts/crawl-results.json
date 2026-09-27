@@ -1,0 +1,291 @@
+{
+  "timestamp": "2026-09-27T14:38:37.372Z",
+  "extractor_sha256": "77f623ff9150cb86c74246645623a6caef2b7a569357c6c915703cd96e84e1e1",
+  "results": [
+    {
+      "site": "Adafruit",
+      "url": "https://www.adafruit.com/product/5813",
+      "query": "",
+      "status": "PASS",
+      "products": [
+        {
+          "product_id": "cc3106d8",
+          "name": "Raspberry Pi 5 - 8 GB RAM",
+          "normalized_name": "raspberry pi 5 8 gb ram",
+          "brand": "Raspberry Pi",
+          "model": "",
+          "category": "single_board_computer",
+          "price": 200,
+          "currency": "USD",
+          "rating": null,
+          "review_count": null,
+          "seller": "www.adafruit.com",
+          "condition": "unknown",
+          "image_url": "https://cdn-shop.adafruit.com//970x728/5813-01.jpg",
+          "product_url": "https://www.adafruit.com/product/5813",
+          "source_site": "www.adafruit.com",
+          "extraction_method": "json_ld+dictionary+keyword_rule",
+          "confidence": 0.99,
+          "timestamp": "2026-09-27T14:38:27.102Z",
+          "provenance": {
+            "name": {
+              "value": "Raspberry Pi 5 - 8 GB RAM",
+              "source": "json_ld",
+              "confidence": 0.99
+            },
+            "price": {
+              "value": 200,
+              "source": "json_ld",
+              "confidence": 0.99
+            },
+            "brand": {
+              "value": "Raspberry Pi",
+              "source": "dictionary",
+              "confidence": 0.75
+            },
+            "currency": {
+              "value": "USD",
+              "source": "json_ld",
+              "confidence": 0.99
+            },
+            "image_url": {
+              "value": "https://cdn-shop.adafruit.com//970x728/5813-01.jpg",
+              "source": "json_ld",
+              "confidence": 0.95
+            },
+            "category": {
+              "value": "single_board_computer",
+              "source": "keyword_rule",
+              "confidence": 0.9
+            }
+          }
+        }
+      ],
+      "duration_ms": 1129.8857,
+      "blind": false,
+      "kind": "independent"
+    },
+    {
+      "site": "Pimoroni",
+      "url": "https://shop.pimoroni.com/products/raspberry-pi-5",
+      "query": "",
+      "status": "PASS",
+      "products": [
+        {
+          "product_id": "817d79fc",
+          "name": "Raspberry Pi 5",
+          "normalized_name": "raspberry pi 5",
+          "brand": "Raspberry Pi",
+          "model": "",
+          "category": "single_board_computer",
+          "price": 43.2,
+          "currency": "GBP",
+          "rating": 4.88,
+          "review_count": 531,
+          "seller": "Pimoroni",
+          "condition": "unknown",
+          "image_url": "https://shop.pimoroni.com/cdn/shop/files/raspberry-pi-5_5113a224-ba8f-4d11-946e-082eeb52029c_1024x1024.png",
+          "product_url": "https://shop.pimoroni.com/products/raspberry-pi-5",
+          "source_site": "shop.pimoroni.com",
+          "extraction_method": "json_ld+keyword_rule",
+          "confidence": 0.99,
+          "timestamp": "2026-09-27T14:38:28.717Z",
+          "provenance": {
+            "name": {
+              "value": "Raspberry Pi 5",
+              "source": "json_ld",
+              "confidence": 0.99
+            },
+            "price": {
+              "value": 43.2,
+              "source": "json_ld",
+              "confidence": 0.99
+            },
+            "brand": {
+              "value": "Raspberry Pi",
+              "source": "json_ld",
+              "confidence": 0.99
+            },
+            "currency": {
+              "value": "GBP",
+              "source": "json_ld",
+              "confidence": 0.99
+            },
+            "rating": {
+              "value": 4.88,
+              "source": "json_ld",
+              "confidence": 0.95
+            },
+            "review_count": {
+              "value": 531,
+              "source": "json_ld",
+              "confidence": 0.95
+            },
+            "image_url": {
+              "value": "https://shop.pimoroni.com/cdn/shop/files/raspberry-pi-5_5113a224-ba8f-4d11-946e-082eeb52029c_1024x1024.png",
+              "source": "json_ld",
+              "confidence": 0.95
+            },
+            "category": {
+              "value": "single_board_computer",
+              "source": "keyword_rule",
+              "confidence": 0.9
+            }
+          }
+        }
+      ],
+      "duration_ms": 1613.4462999999998,
+      "blind": false,
+      "kind": "brand_shopify"
+    },
+    {
+      "site": "The Pi Hut",
+      "url": "https://thepihut.com/products/raspberry-pi-5",
+      "query": "",
+      "status": "PARTIAL",
+      "products": [],
+      "duration_ms": 1882.6289999999995,
+      "blind": false,
+      "kind": "shopify"
+    },
+    {
+      "site": "SparkFun",
+      "url": "https://www.sparkfun.com/raspberry-pi-5-8gb.html",
+      "query": "",
+      "status": "PARTIAL",
+      "products": [],
+      "duration_ms": 2506.3125,
+      "blind": true,
+      "kind": "independent"
+    },
+    {
+      "site": "Waveshare",
+      "url": "https://www.waveshare.com/raspberry-pi-5.htm",
+      "query": "",
+      "status": "PARTIAL",
+      "products": [
+        {
+          "product_id": "fa784bf4",
+          "name": "Waveshare",
+          "normalized_name": "waveshare",
+          "brand": "",
+          "model": "",
+          "category": "unknown",
+          "price": null,
+          "currency": "UNKNOWN",
+          "rating": null,
+          "review_count": null,
+          "seller": "www.waveshare.com",
+          "condition": "unknown",
+          "image_url": "https://www.waveshare.com/raspberry-pi-5.htm",
+          "product_url": "https://www.waveshare.com/raspberry-pi-5.htm",
+          "source_site": "www.waveshare.com",
+          "extraction_method": "dom+keyword_rule",
+          "confidence": 0.8,
+          "timestamp": "2026-09-27T14:38:34.628Z",
+          "provenance": {
+            "name": {
+              "value": "Waveshare",
+              "source": "dom",
+              "confidence": 0.8
+            },
+            "category": {
+              "value": "unknown",
+              "source": "keyword_rule",
+              "confidence": 0.2
+            }
+          }
+        }
+      ],
+      "duration_ms": 1522.1130000000003,
+      "blind": true,
+      "kind": "brand"
+    },
+    {
+      "site": "Books to Scrape",
+      "url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+      "query": "",
+      "status": "PASS",
+      "products": [
+        {
+          "product_id": "f3cfee03",
+          "name": "A Light in the Attic",
+          "normalized_name": "a light in the attic",
+          "brand": "",
+          "model": "",
+          "category": "book",
+          "price": 51.77,
+          "currency": "GBP",
+          "rating": null,
+          "review_count": null,
+          "seller": "books.toscrape.com",
+          "condition": "unknown",
+          "image_url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+          "product_url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+          "source_site": "books.toscrape.com",
+          "extraction_method": "dom+symbol+keyword_rule",
+          "confidence": 0.8,
+          "timestamp": "2026-09-27T14:38:36.095Z",
+          "provenance": {
+            "name": {
+              "value": "A Light in the Attic",
+              "source": "dom",
+              "confidence": 0.8
+            },
+            "price": {
+              "value": 51.77,
+              "source": "dom",
+              "confidence": 0.75
+            },
+            "currency": {
+              "value": "GBP",
+              "source": "symbol",
+              "confidence": 0.8
+            },
+            "category": {
+              "value": "book",
+              "source": "keyword_rule",
+              "confidence": 0.9
+            }
+          }
+        }
+      ],
+      "duration_ms": 1466.9254,
+      "blind": true,
+      "kind": "demo_unstructured"
+    },
+    {
+      "site": "Coupang",
+      "url": "https://www.coupang.com/np/search?q=galaxy+buds3+pro",
+      "query": "",
+      "status": "BLOCKED",
+      "products": [],
+      "error": "BLOCKED_ROBOTS",
+      "duration_ms": 202.66680000000088,
+      "blind": false,
+      "kind": "korean_marketplace"
+    },
+    {
+      "site": "Samsung",
+      "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds3-pro/",
+      "query": "",
+      "status": "UNSUPPORTED",
+      "products": [],
+      "error": "UNSUPPORTED_REDIRECT",
+      "duration_ms": 411.8707000000013,
+      "blind": false,
+      "kind": "official_brand"
+    },
+    {
+      "site": "eBay",
+      "url": "https://www.ebay.com/sch/i.html?_nkw=raspberry+pi+5",
+      "query": "",
+      "status": "BLOCKED",
+      "products": [],
+      "error": "BLOCKED_ROBOTS",
+      "duration_ms": 662.1265000000003,
+      "blind": false,
+      "kind": "used_marketplace"
+    }
+  ]
+}

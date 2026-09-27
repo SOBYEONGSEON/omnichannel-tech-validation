@@ -1,0 +1,8 @@
+node_modules/
+.tools/
+dist/
+artifacts/browser-profile*/
+artifacts/server-token.txt
+artifacts/*.log
+*.traineddata*
+.env

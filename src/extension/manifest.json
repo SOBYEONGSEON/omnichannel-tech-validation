@@ -1,0 +1,9 @@
+{
+  "manifest_version":3,"name":"Omni Product PoC Inspector","version":"0.1.0",
+  "description":"명시적 동의 후 현재 탭만 분석하는 기술검증 도구",
+  "permissions":["activeTab","scripting","storage"],
+  "host_permissions":["http://127.0.0.1:8787/*"],
+  "background":{"service_worker":"background.js"},
+  "action":{"default_popup":"popup.html"},
+  "content_security_policy":{"extension_pages":"script-src 'self'; object-src 'none'"}
+}

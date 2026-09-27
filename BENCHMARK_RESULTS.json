@@ -1,0 +1,331 @@
+{
+  "timestamp": "2026-09-27T15:05:49.094Z",
+  "environment": {
+    "os": "Windows_NT 10.0.26200",
+    "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor           ",
+    "logical_cpus": 16,
+    "ram_gb": 31.102954864501953,
+    "node": "v24.21.0",
+    "python": "not installed / not used",
+    "browser": "153.0.8010.12"
+  },
+  "scope": "100 deterministic backend pipelines with fixture search; 30 + 30 actual browser capture/OCR benchmark runs; live E2E separately",
+  "repeated": {
+    "runs": 100,
+    "success": 100,
+    "failed": 0,
+    "crashes": 0,
+    "timeouts": 0,
+    "latency": {
+      "capture_latency": {
+        "count": 100,
+        "average": 0,
+        "median": 0,
+        "p50": 0,
+        "p95": 0,
+        "maximum": 0
+      },
+      "preprocess_latency": {
+        "count": 100,
+        "average": 0,
+        "median": 0,
+        "p50": 0,
+        "p95": 0,
+        "maximum": 0
+      },
+      "ocr_latency": {
+        "count": 100,
+        "average": 0,
+        "median": 0,
+        "p50": 0,
+        "p95": 0,
+        "maximum": 0
+      },
+      "extract_latency": {
+        "count": 100,
+        "average": 0.03473199999999906,
+        "median": 0.03170000000000073,
+        "p50": 0.03170000000000073,
+        "p95": 0.054300000000012005,
+        "maximum": 0.08639999999991232
+      },
+      "classify_latency": {
+        "count": 100,
+        "average": 0.002778000000007523,
+        "median": 0.0018999999999778083,
+        "p50": 0.0018999999999778083,
+        "p95": 0.005400000000008731,
+        "maximum": 0.04369999999994434
+      },
+      "search_latency": {
+        "count": 100,
+        "average": 0.001366000000011809,
+        "median": 0.0009000000000014552,
+        "p50": 0.0009000000000014552,
+        "p95": 0.0027000000000043656,
+        "maximum": 0.024000000000114596
+      },
+      "ranking_latency": {
+        "count": 100,
+        "average": 0.011321000000002641,
+        "median": 0.009700000000066211,
+        "p50": 0.009700000000066211,
+        "p95": 0.017799999999851934,
+        "maximum": 0.09700000000020736
+      },
+      "render_latency": {
+        "count": 100,
+        "average": 0,
+        "median": 0,
+        "p50": 0,
+        "p95": 0,
+        "maximum": 0
+      },
+      "total_latency": {
+        "count": 100,
+        "average": 0.10030699999999569,
+        "median": 0.088799999999992,
+        "p50": 0.088799999999992,
+        "p95": 0.15660000000002583,
+        "maximum": 0.5124000000000706
+      },
+      "decision_latency": {
+        "count": 100,
+        "average": 0.0013400000000001455,
+        "median": 0.001099999999951251,
+        "p50": 0.001099999999951251,
+        "p95": 0.0019999999999527063,
+        "maximum": 0.00709999999980937
+      }
+    },
+    "memory_growth_mb": 17.66015625,
+    "first_ten_latency": {
+      "count": 10,
+      "average": 0.17505000000003293,
+      "median": 0.13199999999983447,
+      "p50": 0.13199999999983447,
+      "p95": 0.5124000000000706,
+      "maximum": 0.5124000000000706
+    },
+    "last_ten_latency": {
+      "count": 10,
+      "average": 0.07072000000002845,
+      "median": 0.06970000000001164,
+      "p50": 0.06970000000001164,
+      "p95": 0.08740000000011605,
+      "maximum": 0.08740000000011605
+    },
+    "cpu_average_percent": {
+      "count": 100,
+      "average": 0,
+      "median": 0,
+      "p50": 0,
+      "p95": 0,
+      "maximum": 0
+    },
+    "ram_peak_mb": 190.35546875
+  },
+  "capture_comparison": [
+    {
+      "mode": "always_capture",
+      "synthetic_only": true,
+      "runs": 30,
+      "captures": 30,
+      "ocr_calls": 18,
+      "sensitive_captures": 12,
+      "unneeded_capture_ratio": 0.6,
+      "latency": {
+        "count": 30,
+        "average": 201.63723999999996,
+        "median": 301.98009999999977,
+        "p50": 301.98009999999977,
+        "p95": 351.35260000000017,
+        "maximum": 354.9731999999999
+      },
+      "capture_latency": {
+        "count": 30,
+        "average": 19.167153333333303,
+        "median": 17.11539999999968,
+        "p50": 17.11539999999968,
+        "p95": 24.286200000000008,
+        "maximum": 64.96419999999989
+      },
+      "resources": {
+        "duration_ms": 6126.537200000001,
+        "backend_cpu_percent": 155.83019232746128,
+        "backend_cpu_peak_percent": 583.2037325038814,
+        "system_cpu_percent": 25.869657816271474,
+        "ram_average_mb": 331.1952734375,
+        "ram_peak_mb": 413.21875,
+        "ram_before_mb": 322.83984375,
+        "ram_after_mb": 397.44140625
+      },
+      "browser_task_seconds": 0.058111,
+      "browser_heap_before_mb": 0.9483642578125,
+      "browser_heap_after_mb": 1.4539031982421875
+    },
+    {
+      "mode": "conditional_capture",
+      "synthetic_only": true,
+      "runs": 30,
+      "captures": 12,
+      "ocr_calls": 0,
+      "sensitive_captures": 0,
+      "unneeded_capture_ratio": 0,
+      "latency": {
+        "count": 30,
+        "average": 7.485136666666524,
+        "median": 0.007999999999810825,
+        "p50": 0.007999999999810825,
+        "p95": 21.635200000000623,
+        "maximum": 22.953200000001743
+      },
+      "capture_latency": {
+        "count": 12,
+        "average": 18.606475000000046,
+        "median": 17.16699999999946,
+        "p50": 17.16699999999946,
+        "p95": 22.86909999999989,
+        "maximum": 22.86909999999989
+      },
+      "resources": {
+        "duration_ms": 275.66010000000097,
+        "backend_cpu_percent": 28.295357094661767,
+        "backend_cpu_peak_percent": 65.16727625222973,
+        "system_cpu_percent": 30.160577146846634,
+        "ram_average_mb": 292.88359375,
+        "ram_peak_mb": 293.8203125,
+        "ram_before_mb": 356.00390625,
+        "ram_after_mb": 291.5546875
+      },
+      "browser_task_seconds": 0.025549000000000002,
+      "browser_heap_before_mb": 1.4539031982421875,
+      "browser_heap_after_mb": 1.6627731323242188
+    }
+  ],
+  "ocr": {
+    "checks": [
+      {
+        "success": true,
+        "text": "Galaxy Buds3 Pro\n$259.00\n",
+        "confidence": 93,
+        "preprocess_latency": 19.454799999999977,
+        "ocr_latency": 267.0941
+      }
+    ],
+    "resources": {
+      "duration_ms": 287.5383999999999,
+      "backend_cpu_percent": 174.23614318385427,
+      "backend_cpu_peak_percent": 405.0672101963413,
+      "system_cpu_percent": 22.12586168556816,
+      "ram_average_mb": 296.376953125,
+      "ram_peak_mb": 358.00390625,
+      "ram_before_mb": 190.1953125,
+      "ram_after_mb": 338.86328125
+    }
+  },
+  "idle": {
+    "duration_ms": 601.2602,
+    "backend_cpu_percent": 0,
+    "backend_cpu_peak_percent": 0,
+    "system_cpu_percent": 15.89889930697106,
+    "ram_average_mb": 171.9638671875,
+    "ram_peak_mb": 171.97265625,
+    "ram_before_mb": 171.9609375,
+    "ram_after_mb": 171.97265625
+  },
+  "gpu": {
+    "status": "NOT_MEASURED"
+  },
+  "browser_memory_scope": "JS heap only; not complete browser process RSS",
+  "extension_repeat": {
+    "scope": "30 actual Chrome extension runs on synthetic dynamic DOM; external catalog cache warm; 2.7s pacing excluded",
+    "runs": 30,
+    "success": 30,
+    "failed": 0,
+    "latency": {
+      "capture_latency": {
+        "count": 30,
+        "average": 19.956666667511065,
+        "median": 20.100000001490116,
+        "p50": 20.100000001490116,
+        "p95": 21.100000001490116,
+        "maximum": 21.200000002980232
+      },
+      "preprocess_latency": {
+        "count": 30,
+        "average": 0,
+        "median": 0,
+        "p50": 0,
+        "p95": 0,
+        "maximum": 0
+      },
+      "ocr_latency": {
+        "count": 30,
+        "average": 0,
+        "median": 0,
+        "p50": 0,
+        "p95": 0,
+        "maximum": 0
+      },
+      "extract_latency": {
+        "count": 30,
+        "average": 0.09200333330857878,
+        "median": 0.08330000005662441,
+        "p50": 0.08330000005662441,
+        "p95": 0.13799999991897494,
+        "maximum": 0.1492999999318272
+      },
+      "classify_latency": {
+        "count": 30,
+        "average": 0.009513333342814198,
+        "median": 0.008200000040233135,
+        "p50": 0.008200000040233135,
+        "p95": 0.015599999926052988,
+        "maximum": 0.023999999975785613
+      },
+      "search_latency": {
+        "count": 30,
+        "average": 0.06645333333096157,
+        "median": 0.0609000000404194,
+        "p50": 0.0609000000404194,
+        "p95": 0.0918999999994412,
+        "maximum": 0.11809999996330589
+      },
+      "ranking_latency": {
+        "count": 30,
+        "average": 0.05246999999896313,
+        "median": 0.04489999997895211,
+        "p50": 0.04489999997895211,
+        "p95": 0.08010000002104789,
+        "maximum": 0.08129999996162951
+      },
+      "render_latency": {
+        "count": 30,
+        "average": 0.32999999945362407,
+        "median": 0.30000000447034836,
+        "p50": 0.30000000447034836,
+        "p95": 0.3999999985098839,
+        "maximum": 0.4000000059604645
+      },
+      "total_latency": {
+        "count": 30,
+        "average": 20.671470000847087,
+        "median": 20.822100003017113,
+        "p50": 20.822100003017113,
+        "p95": 21.85740000149235,
+        "maximum": 21.877400001510978
+      },
+      "client_total_latency": {
+        "count": 30,
+        "average": 30.53333333308498,
+        "median": 30.80000000447035,
+        "p50": 30.80000000447035,
+        "p95": 31.399999998509884,
+        "maximum": 31.599999994039536
+      }
+    },
+    "backend_ram_growth_mb": 0.4453125,
+    "browser_heap_growth_mb": -1.4356269836425781
+  }
+}
