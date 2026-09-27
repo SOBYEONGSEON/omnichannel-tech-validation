@@ -513,8 +513,8 @@
     "errors": []
   },
   "unit": {
-    "tests": 40,
-    "passed": 40,
+    "tests": 64,
+    "passed": 64,
     "failed": 0,
     "success": true
   },
@@ -948,5 +948,105 @@
     "temporary_profiles_and_token_deleted": true,
     "profiles_deleted": 3,
     "raw_screenshot_files_created": 0
+  },
+  "live_v02": {
+    "timestamp": "2026-09-27T17:06:26.361Z",
+    "pass": true,
+    "unit_tests": {
+      "passed": 64,
+      "total": 64
+    },
+    "cases": [
+      {
+        "name": "control_center_sample_actual_model",
+        "pass": true
+      },
+      {
+        "name": "same_url_periodic_capture_and_interest",
+        "pass": true,
+        "frames": 3,
+        "interests": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.7738499641418457,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.04236173629760742,
+              "ymin": 0.18372279405593872,
+              "xmax": 0.1789303421974182,
+              "ymax": 0.22753989696502686
+            },
+            "observations": 3,
+            "first_seen": "2026-09-27T17:06:38.427Z",
+            "last_seen": "2026-09-27T17:06:48.526Z",
+            "domains": [
+              "127.0.0.1"
+            ]
+          },
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.7,
+            "source": "ocr_dictionary",
+            "observations": 3,
+            "first_seen": "2026-09-27T17:06:38.427Z",
+            "last_seen": "2026-09-27T17:06:48.526Z",
+            "domains": [
+              "127.0.0.1"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "pause_prevents_capture_analysis",
+        "pass": true
+      },
+      {
+        "name": "sensitive_password_page_blocked",
+        "pass": true
+      },
+      {
+        "name": "typing_blocks_capture",
+        "pass": true
+      },
+      {
+        "name": "spa_sensitive_route_blocked",
+        "pass": true
+      },
+      {
+        "name": "spa_return_to_feed_resumes",
+        "pass": true
+      },
+      {
+        "name": "consent_withdrawal_stops_periodic_capture",
+        "pass": true
+      },
+      {
+        "name": "program_start_begins_analysis_with_stored_consent",
+        "pass": true
+      },
+      {
+        "name": "backend_off_zero_additional_screenshots",
+        "pass": true
+      },
+      {
+        "name": "backend_restart_same_token_resumes_without_click",
+        "pass": true
+      },
+      {
+        "name": "widget_stop_disables_and_erases",
+        "pass": true
+      }
+    ],
+    "repeat": {
+      "count": 30,
+      "success": 30,
+      "timeout": 0
+    },
+    "errors": [],
+    "permission_note": "Fresh headless Chromium profile, TEST ONLY manifest pregrants host access. Chrome initial optional permission dialog remains a manual step.",
+    "social_note": "Non-shopping feed fixture tested; logged-in Instagram/YouTube sessions not tested.",
+    "accuracy_note": "Remote control identification verified on one public image and its fixture screenshot; not a general object-recognition accuracy dataset."
   }
 }

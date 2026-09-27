@@ -1,0 +1,374 @@
+{
+  "timestamp": "2026-09-27T17:06:26.361Z",
+  "cases": [
+    {
+      "name": "control_center_sample_actual_model",
+      "pass": true
+    },
+    {
+      "name": "same_url_periodic_capture_and_interest",
+      "pass": true,
+      "frames": 3,
+      "interests": [
+        {
+          "key": "remote",
+          "label": "리모컨",
+          "confidence": 0.7738499641418457,
+          "source": "local_object_model",
+          "box": {
+            "xmin": 0.04236173629760742,
+            "ymin": 0.18372279405593872,
+            "xmax": 0.1789303421974182,
+            "ymax": 0.22753989696502686
+          },
+          "observations": 3,
+          "first_seen": "2026-09-27T17:06:38.427Z",
+          "last_seen": "2026-09-27T17:06:48.526Z",
+          "domains": [
+            "127.0.0.1"
+          ]
+        },
+        {
+          "key": "term:galaxy buds3 pro",
+          "label": "Galaxy Buds3 Pro",
+          "confidence": 0.7,
+          "source": "ocr_dictionary",
+          "observations": 3,
+          "first_seen": "2026-09-27T17:06:38.427Z",
+          "last_seen": "2026-09-27T17:06:48.526Z",
+          "domains": [
+            "127.0.0.1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pause_prevents_capture_analysis",
+      "pass": true
+    },
+    {
+      "name": "sensitive_password_page_blocked",
+      "pass": true
+    },
+    {
+      "name": "typing_blocks_capture",
+      "pass": true
+    },
+    {
+      "name": "spa_sensitive_route_blocked",
+      "pass": true
+    },
+    {
+      "name": "spa_return_to_feed_resumes",
+      "pass": true
+    },
+    {
+      "name": "consent_withdrawal_stops_periodic_capture",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "permission_note": "Fresh headless Chromium profile, TEST ONLY manifest pregrants host access. Chrome initial optional permission dialog remains a manual step.",
+  "social_note": "Non-shopping feed fixture tested; logged-in Instagram/YouTube sessions not tested.",
+  "repeat": {
+    "count": 30,
+    "success": 30,
+    "timeout": 0,
+    "screenshots": 35,
+    "latest": {
+      "timestamp": "2026-09-27T17:09:48.019Z",
+      "domain": "127.0.0.1",
+      "source": "chrome_periodic",
+      "capture": true,
+      "capture_reason": [
+        "periodic_visible_screen",
+        "privacy_heuristics_passed"
+      ],
+      "image_bytes": 105080,
+      "cache_hit": true,
+      "objects": [
+        {
+          "key": "remote",
+          "label": "리모컨",
+          "confidence": 0.7738499641418457,
+          "source": "local_object_model",
+          "box": {
+            "xmin": 0.04236173629760742,
+            "ymin": 0.18372279405593872,
+            "xmax": 0.1789303421974182,
+            "ymax": 0.22753989696502686
+          }
+        }
+      ],
+      "product_terms": [
+        "Galaxy Buds3 Pro"
+      ],
+      "ignored_objects": 3,
+      "ocr_error": null,
+      "timings": {
+        "preprocess_ms": 0,
+        "detection_ms": 0,
+        "ocr_ms": 0,
+        "total_ms": 0.12619999999878928,
+        "capture_ms": 12.5,
+        "cpu_percent": 0,
+        "memory_mb": 1067.4765625
+      },
+      "stored": [
+        "사물 분류·confidence",
+        "사전에 일치한 상품명",
+        "관측 수·시각·도메인",
+        "처리시간·자원 수치"
+      ],
+      "search_queries": [
+        "리모컨",
+        "Galaxy Buds3 Pro"
+      ]
+    },
+    "samples": [
+      {
+        "total_ms": 2250.6686000000045,
+        "capture_ms": 11.300000004470348,
+        "cpu_percent": 11.457706390003375,
+        "memory_mb": 1181.15625
+      },
+      {
+        "total_ms": 0.18730000000505242,
+        "capture_ms": 11.800000004470348,
+        "cpu_percent": 0,
+        "memory_mb": 1076.5546875
+      },
+      {
+        "total_ms": 0.1496999999944819,
+        "capture_ms": 11.399999998509884,
+        "cpu_percent": 0,
+        "memory_mb": 1064.39453125
+      },
+      {
+        "total_ms": 0.18830000000889413,
+        "capture_ms": 12.100000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1065.625
+      },
+      {
+        "total_ms": 0.14170000000740401,
+        "capture_ms": 11.600000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1065.53515625
+      },
+      {
+        "total_ms": 0.13850000000093132,
+        "capture_ms": 11.200000002980232,
+        "cpu_percent": 0,
+        "memory_mb": 1065.82421875
+      },
+      {
+        "total_ms": 0.14459999999962747,
+        "capture_ms": 11.399999998509884,
+        "cpu_percent": 0,
+        "memory_mb": 1065.53125
+      },
+      {
+        "total_ms": 0.14670000001206063,
+        "capture_ms": 11.800000004470348,
+        "cpu_percent": 0,
+        "memory_mb": 1065.83984375
+      },
+      {
+        "total_ms": 0.1389000000199303,
+        "capture_ms": 11.100000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1065.63671875
+      },
+      {
+        "total_ms": 0.1484000000054948,
+        "capture_ms": 11.600000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1065.91015625
+      },
+      {
+        "total_ms": 0.15470000001369044,
+        "capture_ms": 12.799999997019768,
+        "cpu_percent": 0,
+        "memory_mb": 1066.4453125
+      },
+      {
+        "total_ms": 0.16099999999278225,
+        "capture_ms": 14.300000004470348,
+        "cpu_percent": 0,
+        "memory_mb": 1065.8984375
+      },
+      {
+        "total_ms": 0.13899999999557622,
+        "capture_ms": 12.700000002980232,
+        "cpu_percent": 0,
+        "memory_mb": 1066.171875
+      },
+      {
+        "total_ms": 0.14470000000437722,
+        "capture_ms": 11.399999998509884,
+        "cpu_percent": 0,
+        "memory_mb": 1065.90234375
+      },
+      {
+        "total_ms": 0.12850000002072193,
+        "capture_ms": 11.600000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1066.17578125
+      },
+      {
+        "total_ms": 0.12980000002426095,
+        "capture_ms": 11.799999997019768,
+        "cpu_percent": 0,
+        "memory_mb": 1066.4609375
+      },
+      {
+        "total_ms": 0.14659999997820705,
+        "capture_ms": 11.399999998509884,
+        "cpu_percent": 0,
+        "memory_mb": 1065.8984375
+      },
+      {
+        "total_ms": 0.1369999999878928,
+        "capture_ms": 11.299999997019768,
+        "cpu_percent": 0,
+        "memory_mb": 1066.171875
+      },
+      {
+        "total_ms": 0.128999999986263,
+        "capture_ms": 10.299999997019768,
+        "cpu_percent": 0,
+        "memory_mb": 1065.8984375
+      },
+      {
+        "total_ms": 0.14739999998710118,
+        "capture_ms": 9.399999998509884,
+        "cpu_percent": 0,
+        "memory_mb": 1066.171875
+      },
+      {
+        "total_ms": 0.1300000000046566,
+        "capture_ms": 11.700000002980232,
+        "cpu_percent": 0,
+        "memory_mb": 1065.8984375
+      },
+      {
+        "total_ms": 0.12530000001424924,
+        "capture_ms": 8.5,
+        "cpu_percent": 0,
+        "memory_mb": 1066.171875
+      },
+      {
+        "total_ms": 0.1287000000011176,
+        "capture_ms": 11.099999994039536,
+        "cpu_percent": 0,
+        "memory_mb": 1065.94921875
+      },
+      {
+        "total_ms": 0.13710000002174638,
+        "capture_ms": 11.100000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1066.58984375
+      },
+      {
+        "total_ms": 0.1354999999748543,
+        "capture_ms": 11.400000005960464,
+        "cpu_percent": 0,
+        "memory_mb": 1067.65625
+      },
+      {
+        "total_ms": 0.13210000001708977,
+        "capture_ms": 11.5,
+        "cpu_percent": 0,
+        "memory_mb": 1067.1171875
+      },
+      {
+        "total_ms": 0.14060000001336448,
+        "capture_ms": 11.800000004470348,
+        "cpu_percent": 0,
+        "memory_mb": 1067.390625
+      },
+      {
+        "total_ms": 0.13610000000335276,
+        "capture_ms": 11.600000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1067.12109375
+      },
+      {
+        "total_ms": 0.12510000000474975,
+        "capture_ms": 12,
+        "cpu_percent": 0,
+        "memory_mb": 1067.40234375
+      },
+      {
+        "total_ms": 0.12399999995250255,
+        "capture_ms": 11.699999995529652,
+        "cpu_percent": 0,
+        "memory_mb": 1067.13671875
+      },
+      {
+        "total_ms": 0.13300000003073364,
+        "capture_ms": 11.100000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1067.41015625
+      },
+      {
+        "total_ms": 0.1292000000248663,
+        "capture_ms": 11.700000002980232,
+        "cpu_percent": 0,
+        "memory_mb": 1067.19140625
+      },
+      {
+        "total_ms": 0.12700000003678724,
+        "capture_ms": 11,
+        "cpu_percent": 0,
+        "memory_mb": 1067.4765625
+      },
+      {
+        "total_ms": 0.12880000000586733,
+        "capture_ms": 10.100000001490116,
+        "cpu_percent": 0,
+        "memory_mb": 1067.203125
+      },
+      {
+        "total_ms": 0.12619999999878928,
+        "capture_ms": 12.5,
+        "cpu_percent": 0,
+        "memory_mb": 1067.4765625
+      }
+    ],
+    "interests": [
+      {
+        "key": "remote",
+        "label": "리모컨",
+        "confidence": 0.7738499641418457,
+        "source": "local_object_model",
+        "box": {
+          "xmin": 0.04236173629760742,
+          "ymin": 0.18372279405593872,
+          "xmax": 0.1789303421974182,
+          "ymax": 0.22753989696502686
+        },
+        "observations": 35,
+        "first_seen": "2026-09-27T17:06:38.427Z",
+        "last_seen": "2026-09-27T17:09:48.018Z",
+        "domains": [
+          "127.0.0.1"
+        ]
+      },
+      {
+        "key": "term:galaxy buds3 pro",
+        "label": "Galaxy Buds3 Pro",
+        "confidence": 0.7,
+        "source": "ocr_dictionary",
+        "observations": 35,
+        "first_seen": "2026-09-27T17:06:38.427Z",
+        "last_seen": "2026-09-27T17:09:48.018Z",
+        "domains": [
+          "127.0.0.1"
+        ]
+      }
+    ]
+  },
+  "pass": true
+}

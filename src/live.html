@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>실시간 관심 사물 분석 · 직접 테스트</title>
+<style>
+body{font:15px system-ui;max-width:1100px;margin:30px auto;padding:0 20px;background:#f4f6fa;color:#182233}section{background:white;padding:20px;margin:16px 0;border:1px solid #dde3ed;border-radius:10px}input,button,select{padding:9px;margin:4px}input{width:380px;max-width:90%}pre{white-space:pre-wrap;word-break:break-word;background:#f0f3f8;padding:14px;font-size:12px}table{width:100%;border-collapse:collapse}td,th{padding:10px;text-align:left;border-bottom:1px solid #ddd}a{color:#145aba}.note{color:#546275;line-height:1.7}strong{color:#135b38}
+</style>
+<h1>실시간 관심 사물 분석</h1>
+<p>프로그램 시작 → 활성 탭 주기 캡처 → 사물·상품 문구 인식 → 반복 노출 집계</p>
+<section>
+  <h2>1. 프로그램 연결</h2>
+  <p><code>artifacts/server-token.txt</code> 파일을 열어 토큰을 입력하세요. 이 화면에는 브라우저 세션 동안만 보관합니다.</p>
+  <input id="token" type="password" autocomplete="off" placeholder="연결 토큰 64자리"><button id="connect">연결</button>
+  <p id="connection">연결 대기</p>
+</section>
+<section>
+  <h2>2. 분석 제어</h2>
+  <p><strong id="status">연결 필요</strong> <span id="counts"></span></p>
+  <button id="resume">분석 재개</button><button id="pause">일시정지</button><button id="clear">관심 데이터 삭제</button>
+  <label>캡처 간격 <select id="interval"><option value="5">5초</option><option value="10" selected>10초</option><option value="30">30초</option><option value="60">60초</option></select></label>
+  <p class="note">확장 프로그램에서 최초 1회 동의해야 Chrome 주기 캡처가 시작됩니다. 기본 10초 이상 간격이며 분석이 끝나기 전에는 다음 캡처를 하지 않습니다. 로그인·결제·메일·메시지·설정 및 입력 중인 화면은 제외합니다.</p>
+</section>
+<section>
+  <h2>3. 직접 테스트</h2>
+  <p><a href="/demo" target="_blank" rel="noopener">사물 이미지 테스트 화면 열기</a> — 이 탭을 보고 20~30초 기다리면 페이지 이동 없이 관측 수가 증가합니다.</p>
+  <button id="sample">공개 샘플 이미지 1회 분석</button> <span id="test-result"></span>
+  <p class="note">샘플 버튼은 확장 프로그램 없이 분석 엔진을 확인합니다. 실제 화면 캡처 검증은 테스트 화면을 활성 탭으로 둔 상태에서 확인하세요. 샘플에는 고양이와 리모컨이 있으며, 사람·동물은 관심 상품 집계에서 제외합니다.</p>
+</section>
+<section><h2>많이 노출된 물건</h2><p class="note">같은 사물이 한 화면에 여러 개 있어도 주기당 1회로 계산합니다. 노출은 구매 의도를 확정하지 않습니다. 검색 링크는 클릭할 때만 외부 사이트를 엽니다.</p><table><thead><tr><th>사물 / 상품 후보</th><th>관측 수</th><th>추출 방식</th><th>관련 상품 찾기</th></tr></thead><tbody id="interests"></tbody></table></section>
+<section><h2>DEBUG / 데이터 흐름</h2><p id="resources"></p><pre id="debug">대기 중</pre></section>
+<p class="note">분류 모델의 사물 종류는 제한적이며 정확한 브랜드·모델명 인식을 보장하지 않습니다. 개인정보 마스킹은 규칙 기반입니다. 원본 화면과 OCR 전문은 저장하지 않고, 관심 집계는 RAM에만 남기며 30분 TTL·최대 100개로 제한합니다. 프로그램을 종료하면 삭제됩니다.</p>
+<script src="/live.js"></script>
+</html>

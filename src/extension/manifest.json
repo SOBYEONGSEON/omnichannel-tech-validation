@@ -1,9 +1,14 @@
 {
-  "manifest_version":3,"name":"Omni Product PoC Inspector","version":"0.1.0",
-  "description":"명시적 동의 후 현재 탭만 분석하는 기술검증 도구",
-  "permissions":["activeTab","scripting","storage"],
-  "host_permissions":["http://127.0.0.1:8787/*"],
-  "background":{"service_worker":"background.js"},
-  "action":{"default_popup":"popup.html"},
-  "content_security_policy":{"extension_pages":"script-src 'self'; object-src 'none'"}
+  "manifest_version": 3,
+  "name": "Omni Product PoC Inspector",
+  "version": "0.2.0",
+  "description": "명시적 동의 후 활성 탭을 주기적으로 캡처하고 로컬에서 관심 사물을 분석합니다.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1:8787/*"],
+  "optional_host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  }
 }

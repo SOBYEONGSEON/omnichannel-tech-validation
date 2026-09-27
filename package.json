@@ -6,12 +6,15 @@
   "scripts": {
     "build": "tsx scripts/build.ts",
     "start": "tsx src/server.ts",
+    "prepare:vision": "tsx scripts/prepare-vision.ts",
+    "test:live": "tsx scripts/live-e2e.ts",
+    "test:startup": "tsx scripts/live-startup-e2e.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "lint": "eslint src scripts tests",
     "validate": "tsx scripts/validate.ts",
     "e2e": "tsx scripts/e2e.ts",
-    "report": "tsx scripts/report.ts",
+    "report": "tsx scripts/report.ts && tsx scripts/report-live.ts",
     "probe": "tsx scripts/probe.ts",
     "ui:smoke": "tsx scripts/ui-smoke.ts",
     "audit:record": "tsx scripts/audit.ts",
@@ -19,6 +22,7 @@
     "check": "npm run typecheck && npm run lint && npm test && npm run build"
   },
   "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
     "linkedom": "^0.18.12",
     "robots-parser": "^3.0.1",
     "sharp": "^0.35.5",

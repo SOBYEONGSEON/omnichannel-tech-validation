@@ -1,0 +1,37 @@
+{
+  "objects": [
+    {
+      "key": "remote",
+      "label": "리모컨",
+      "confidence": 0.9959434866905212,
+      "source": "local_object_model",
+      "box": {
+        "xmin": 0.05730940401554108,
+        "ymin": 0.1652679592370987,
+        "xmax": 0.28928403556346893,
+        "ymax": 0.24363581836223602
+      }
+    },
+    {
+      "key": "remote",
+      "label": "리모컨",
+      "confidence": 0.993096649646759,
+      "source": "local_object_model",
+      "box": {
+        "xmin": 0.5074464529752731,
+        "ymin": 0.17334848642349243,
+        "xmax": 0.589082196354866,
+        "ymax": 0.3969513773918152
+      }
+    }
+  ],
+  "terms": [],
+  "ignored_objects": 2,
+  "ocr_error": null,
+  "timings": {
+    "preprocess_ms": 6.419000000000096,
+    "detection_ms": 1427.3057000000003,
+    "ocr_ms": 509.32100000000037,
+    "total_ms": 1943.0501
+  }
+}

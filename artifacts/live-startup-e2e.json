@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-27T17:18:24.196Z",
+  "cases": [
+    {
+      "name": "program_start_begins_analysis_with_stored_consent",
+      "pass": true
+    },
+    {
+      "name": "backend_off_zero_additional_screenshots",
+      "pass": true
+    },
+    {
+      "name": "backend_restart_same_token_resumes_without_click",
+      "pass": true
+    },
+    {
+      "name": "widget_stop_disables_and_erases",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "permission_note": "TEST ONLY host grant; persisted pairing configured by harness.",
+  "pass": true
+}

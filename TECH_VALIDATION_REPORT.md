@@ -1,6 +1,36 @@
+<!-- LIVE_VALIDATION -->
+# v0.2 추가 검증 — 주기적 관심 사물 분석
+
+생성: 2026-09-27T17:19:14.308Z · 재현: run.cmd test:live, run.cmd test:startup, run.cmd report.
+
+**FEASIBLE WITH CONDITIONS**. 쇼핑 여부와 무관한 활성 Chrome 탭의 주기 캡처, 로컬 객체 인식/OCR, 반복 노출 집계, 위젯, 직접 테스트 화면을 구현했습니다. 초기 1회 Chrome 권한 동의 후 프로그램 실행 시 자동 분석합니다.
+
+- 실제 Chrome 주기 반복 **30/30 성공**. 이동하지 않는 동일 URL에서 35회 캡처가 기록됐고 리모컨과 OCR 상품명 관측 수가 증가했습니다.
+- 제어/안정성 브라우저 시나리오 **12/12 통과**: 샘플 버튼, 주기 캡처, 일시정지, 비밀번호/입력/SPA DM 제외, 재개, 동의 철회, 서버 꺼짐, 재시작 자동 복구, 위젯 중지·삭제.
+- 단위·통합 **64/64 통과**. 기존 상품 파이프라인 테스트 포함. 취소/삭제 중 완료된 inference의 결과 폐기, 캐시 재사용, 저장 최소화, 실패 후 복구를 테스트했습니다. 단위 테스트의 vision 결과는 mock이며, 브라우저/vision smoke는 실제 모델입니다.
+- 공개 원본 이미지에서 리모컨 2개를 실제 인식했습니다. 첫 엔진 실행 1943.05ms (객체 1427.31ms, OCR 509.32ms). 사진과 화면 캡처의 confidence는 서로 다를 수 있습니다.
+
+| 측정 | Average | Median | P50 | P95 | Maximum |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 백엔드 처리 ms (동일 이미지 캐시 포함) | 64.44 | 0.14 | 0.14 | 0.19 | 2250.67 |
+| 실제 캡처 ms | 11.46 | 11.50 | 11.50 | 12.80 | 14.30 |
+| 백엔드 CPU % (전체 논리 CPU 기준) | 0.33 | 0.00 | 0.00 | 0.00 | 11.46 |
+| 백엔드 RSS MB | 1069.95 | 1066.17 | 1066.17 | 1076.55 | 1181.16 |
+
+위 통계는 **35개 실제 캡처 후 서버 처리 샘플**이며 동일 화면의 추출 결과 캐시를 포함합니다. 캐시 hit에서 객체 추론/OCR은 다시 호출하지 않습니다. 새 사진/움직이는 동영상에 이 지연시간을 적용할 수 없습니다. 마지막-최초 RSS 변화 -113.68MB, 3번째 이후 warm RSS 변화 3.08MB. 작업 전후 GC 영향을 포함하므로 메모리 누수가 없다는 증명은 아닙니다. GPU, 전체 PC CPU/브라우저 리소스, 실제 소셜 피드 변화에 따른 장기 부하는 이번 추가 검증에서 측정하지 않았습니다.
+
+**직접 사용:** START_POC.cmd 실행 → Chrome에 dist/extension 로드 → 토큰/주기 분석 동의 최초 연결 → [DEBUG/테스트](http://127.0.0.1:8787/live) → 사물 이미지 테스트 화면을 활성 탭으로 20~30초 보기. 상세 절차는 README에 있습니다.
+
+**미완료·조건:** 개인정보 감지는 규칙 기반으로 완전하지 않습니다. 모델은 제한된 사물 종류만 인식하고 일반 SKU/브랜드 식별을 보장하지 않습니다. 한국어 OCR 및 임의 사물의 자동 판매처 가격 비교는 미완료(새 모드는 클릭형 검색 링크 제공, 기존 상품 모드는 판매처 비교 유지). 로그인한 Instagram/YouTube는 실계정으로 검증하지 않았습니다. 실제 optional permission 동의 창은 사용자가 한 번 확인해야 하며 테스트는 분리된 TEST ONLY 권한으로 실행했습니다. 모델 RAM이 약 1GB인 점은 상용화 전 해결 과제입니다.
+
+**개인정보:** 신규 경로에서 전체 URL/제목/DOM/OCR 전문을 저장하지 않습니다. 원본 캡처는 파일로 쓰지 않고 분석 뒤 참조를 해제합니다. 관심 데이터는 RAM 100개/30분 TTL, 성능 100개, 이벤트 30개, 결과 캐시 1개로 제한합니다. 프로그램 종료 시 관측 데이터는 사라지며 연결 토큰과 동의만 유지됩니다. 테스트는 공개 이미지와 합성 화면만 사용했습니다.
+
+검증 근거: artifacts/live-e2e.json, artifacts/live-startup-e2e.json, artifacts/vision-smoke.json, artifacts/unit-results.json. 아래는 기존 상품 페이지 PoC의 검증 이력이며 신규 범용 사물 인식의 정확도 수치로 해석하지 않습니다.
+<!-- /LIVE_VALIDATION -->
+
 # 기술검증 보고서 — FEASIBLE WITH CONDITIONS
 
-생성: 2026-09-27T15:09:16.055Z · 명령: run.cmd report. 실제 실행 결과와 제한을 기록합니다. 입력 증거: BENCHMARK_RESULTS.json, TEST_RESULTS.json, artifacts/*.json.
+생성: 2026-09-27T17:19:14.176Z · 명령: run.cmd report. 실제 실행 결과와 제한을 기록합니다. 입력 증거: BENCHMARK_RESULTS.json, TEST_RESULTS.json, artifacts/*.json.
 
 ## 최종 기술 판단
 
@@ -121,7 +151,7 @@ Blind 성공률 1/3 (33.33%). 추출 snapshot SHA256: 77f623ff9150cb86c742466456
 
 ## 안정성 및 코드 품질
 
-- TypeScript strict, ESLint, build 실행. Vitest 40/40 통과.
+- TypeScript strict, ESLint, build 실행. Vitest 64/64 통과.
 - backend fixture 100/100, 최종 반복 crash 0, timeout 0.
 - 실제 확장 30/30, 실패 0. 외부 응답은 캐시 활용.
 - 장애/보안 20/20 처리. 느린 인터넷/단절/timeout 일부는 제어된 주입; backend down은 실제 connection refused. 무한 스크롤은 500 DOM 노드 증가 모사입니다.

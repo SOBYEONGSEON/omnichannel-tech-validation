@@ -1,1 +1,46 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><style>body{font:14px system-ui;width:310px;padding:16px}input[type=password]{width:290px}button{padding:10px;margin-top:10px}p{line-height:1.5}</style><h3>상품 탐색 기술검증</h3><p>현재 탭의 상품 정보와 조건부 화면 캡처를 로컬 서버에서 처리합니다. 공개 쇼핑 페이지에서 사용하세요. 새 탭에서는 다시 동의해야 합니다.</p><input id="token" type="password" placeholder="artifacts/server-token.txt 토큰"><p><label><input id="consent" type="checkbox">현재 탭 분석 및 조건부 캡처에 동의</label></p><button id="start">분석 시작</button><button id="stop">동의 철회 / 데이터 삭제</button><p id="status"></p><script src="popup.js"></script></html>
+<!doctype html>
+<html lang="ko">
+  <meta charset="utf-8">
+  <style>
+    body {
+      font: 14px system-ui;
+      width: 310px;
+      padding: 16px
+    }
+    input[type=password] {
+      width: 290px
+    }
+    button {
+      padding: 10px;
+      margin-top: 10px
+    }
+    p {
+      line-height: 1.5
+    }
+  </style>
+  <h3>화면 관심 사물 분석</h3>
+  <p>프로그램 실행 후 연결 토큰을 입력하세요. 주기 분석은 쇼핑 페이지가 아니어도 사용할 수 있습니다.</p>
+  <input
+    id="token"
+    type="password"
+    placeholder="artifacts/server-token.txt 토큰"
+  >
+  <details><summary>기존 상품 페이지 1회 분석</summary><p>
+    <label>
+      <input id="consent" type="checkbox">현재 탭 분석 및 조건부 캡처에 동의
+    </label>
+  </p>
+  <button id="start">분석 시작</button>
+  <button id="stop">동의 철회 / 데이터 삭제</button>
+  <p id="status"></p></details>
+  <hr>
+  <h3>주기적 화면 분석</h3>
+  <p>쇼핑·인스타그램·유튜브 등 활성 웹 탭의 화면을 기본 10초마다 로컬에서 분석합니다. 최초 연결 후 프로그램 실행 시 자동 재개합니다.</p>
+  <p><label><input id="live-consent" type="checkbox">민감 화면 제외 및 로컬 주기 캡처에 동의합니다</label></p>
+  <p>민감 정보 차단은 규칙 기반이며 완전하지 않습니다. 비공개 정보가 있는 화면에서는 중지하세요. 원본 이미지는 디스크에 저장하지 않습니다.</p>
+  <button id="live-start">주기 분석 연결 / 시작</button>
+  <button id="live-stop">자동 분석 동의 철회</button>
+  <p id="live-status"></p>
+  <a href="http://127.0.0.1:8787/live" target="_blank" rel="noopener">직접 테스트 / DEBUG 열기</a>
+  <script src="popup.js"></script>
+</html>

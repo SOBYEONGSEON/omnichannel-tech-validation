@@ -327,5 +327,53 @@
     },
     "backend_ram_growth_mb": 0.4453125,
     "browser_heap_growth_mb": -1.4356269836425781
+  },
+  "live_v02": {
+    "timestamp": "2026-09-27T17:06:26.361Z",
+    "scope": "35 actual screenshots of one unchanged non-shopping fixture; 30 repeat cycles plus flow checks; same-image result cache, not 35 fresh inferences. CPU is backend process CPU / logical core count, averaged within each frame, not total-PC sampling.",
+    "backend_ms": {
+      "count": 35,
+      "average": 64.44083142857583,
+      "median": 0.13710000002174638,
+      "p50": 0.13710000002174638,
+      "p95": 0.18830000000889413,
+      "maximum": 2250.6686000000045
+    },
+    "capture_ms": {
+      "count": 35,
+      "average": 11.460000000681196,
+      "median": 11.5,
+      "p50": 11.5,
+      "p95": 12.799999997019768,
+      "maximum": 14.300000004470348
+    },
+    "cpu_percent_per_frame": {
+      "count": 35,
+      "average": 0.32736303971438213,
+      "median": 0,
+      "p50": 0,
+      "p95": 0,
+      "maximum": 11.457706390003375
+    },
+    "backend_rss_mb": {
+      "count": 35,
+      "average": 1069.9541294642856,
+      "median": 1066.171875,
+      "p50": 1066.171875,
+      "p95": 1076.5546875,
+      "maximum": 1181.15625
+    },
+    "rss_change_first_to_last_mb": -113.6796875,
+    "warm_rss_change_mb": 3.08203125,
+    "first_uncached_image": {
+      "preprocess_ms": 6.419000000000096,
+      "detection_ms": 1427.3057000000003,
+      "ocr_ms": 509.32100000000037,
+      "total_ms": 1943.0501
+    },
+    "gpu": "not measured",
+    "system_wide_cpu": "not measured",
+    "repeat": 30,
+    "no_performance_improvement_claim": true
   }
 }
