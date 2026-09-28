@@ -85,28 +85,12 @@ export function productTerms(text: string): string[] {
   return [
     ...new Set(
       [
-        /(?<![a-z0-9])(?:galaxy\s*buds\s*3\s*pro|sm[- ]?r630)(?![a-z0-9])|갤럭시\s*버즈\s*3\s*프로(?![가-힣a-z0-9])/i.test(
-          text,
-        )
+        /galaxy\s*buds\s*3\s*pro|갤럭시\s*버즈\s*3\s*프로/i.test(text)
           ? 'Galaxy Buds3 Pro'
           : '',
-        /\braspberry\s*pi\s*5(?![a-z0-9])/i.test(text) ? 'Raspberry Pi 5' : '',
-        /\bairpods\s*pro(?![a-z0-9])/i.test(text) ? 'AirPods Pro' : '',
-        ...Array.from(
-          text.matchAll(
-            /\biphone\s*(1[1-9])(?:\s*(pro\s*max|pro|plus|mini))?(?![a-z0-9])/gi,
-          ),
-          (match) =>
-            'iPhone ' +
-            match[1] +
-            (match[2]
-              ? ' ' +
-                match[2]
-                  .toLowerCase()
-                  .replace(/pro\s*max/, 'pro max')
-                  .replace(/\b\w/g, (x) => x.toUpperCase())
-              : ''),
-        ),
+        /raspberry\s*pi\s*5/i.test(text) ? 'Raspberry Pi 5' : '',
+        /airpods\s*pro/i.test(text) ? 'AirPods Pro' : '',
+        /iphone\s*\d{2}(?:\s*pro)?/i.exec(text)?.[0].replace(/\s+/g, ' ') || '',
       ].filter(Boolean),
     ),
   ];
@@ -121,34 +105,22 @@ export interface Exposure {
   last_seen: string;
   domains: string[];
   confidence: number;
-  independent_frames?: number;
-  status?: 'candidate' | 'repeated';
 }
 export function addExposure(
   store: Map<string, Exposure>,
   entries: Pick<Exposure, 'key' | 'label' | 'source' | 'confidence'>[],
   domain: string,
   now = Date.now(),
-  independent = true,
 ) {
   for (const [key, value] of store)
     if (now - Date.parse(value.last_seen) > 30 * 60_000) store.delete(key);
-  const unique = new Map<string, (typeof entries)[number]>();
-  for (const entry of entries)
-    if (entry.confidence > (unique.get(entry.key)?.confidence ?? -1))
-      unique.set(entry.key, entry);
+  const unique = new Map(entries.map((e) => [e.key, e]));
   for (const entry of unique.values()) {
     const old = store.get(entry.key);
     const timestamp = new Date(now).toISOString();
     store.set(entry.key, {
       ...entry,
       observations: (old?.observations || 0) + 1,
-      independent_frames:
-        (old?.independent_frames || 0) + (independent ? 1 : 0),
-      status:
-        (old?.independent_frames || 0) + (independent ? 1 : 0) >= 2
-          ? 'repeated'
-          : 'candidate',
       first_seen: old?.first_seen || timestamp,
       last_seen: timestamp,
       domains: [...new Set([...(old?.domains || []), domain])].slice(-10),

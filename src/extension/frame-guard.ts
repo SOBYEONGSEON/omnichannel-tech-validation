@@ -3,7 +3,7 @@ export function frameGuard(mode: 'prepare' | 'check' | 'remove') {
   const maskId = '__omni_privacy_masks';
   const remove = () => {
     document.getElementById(maskId)?.remove();
-    for (const id of ['__omni_live_widget', 'omni-poc-widget']) {
+    for (const id of ['__omni_live_widget', 'omni-poc-host']) {
       const widget = document.getElementById(id);
       if (widget) widget.style.visibility = '';
     }
@@ -43,6 +43,36 @@ export function frameGuard(mode: 'prepare' | 'check' | 'remove') {
       'input,textarea,select,[contenteditable="true"],[role="textbox"]',
     );
   let count = 0;
+  // Generic visible media union: one inference covers all prominent media, no site-specific product selectors.
+  const media = [...document.querySelectorAll('img,video,canvas')]
+    .filter(
+      (el) =>
+        visible(el) &&
+        !el.closest('#__omni_live_widget') &&
+        !/profile|avatar|프로필/i.test(el.getAttribute('alt') || ''),
+    )
+    .map((el) => el.getBoundingClientRect())
+    .filter((r) => r.width >= 160 && r.height >= 120);
+  const regions = media
+    .map((r) => ({
+      left: Math.max(0, r.left),
+      top: Math.max(0, r.top),
+      right: Math.min(innerWidth, r.right),
+      bottom: Math.min(innerHeight, r.bottom),
+    }))
+    .filter((r) => r.right - r.left >= 100 && r.bottom - r.top >= 100);
+  const left = Math.min(...regions.map((r) => r.left)),
+    top = Math.min(...regions.map((r) => r.top));
+  const roi = regions.length
+    ? {
+        left,
+        top,
+        width: Math.max(...regions.map((r) => r.right)) - left,
+        height: Math.max(...regions.map((r) => r.bottom)) - top,
+        viewport_width: innerWidth,
+        viewport_height: innerHeight,
+      }
+    : undefined;
   if (mode === 'prepare' && !sensitive && !editing) {
     remove();
     const host = document.createElement('div');
@@ -85,11 +115,21 @@ export function frameGuard(mode: 'prepare' | 'check' | 'remove') {
       }
     }
     document.documentElement.append(host);
-    for (const id of ['__omni_live_widget', 'omni-poc-widget']) {
+    for (const id of ['__omni_live_widget', 'omni-poc-host']) {
       const widget = document.getElementById(id);
       if (widget) widget.style.visibility = 'hidden';
     }
-    setTimeout(remove, 2000); // Failsafe if capture or service worker fails.
+    // An older failsafe must never remove the mask for a newer fast capture.
+    setTimeout(() => {
+      if (document.getElementById(maskId) === host) remove();
+    }, 2000);
   }
-  return { url: location.href, sensitive, editing, masks: count };
+  return {
+    url: location.href,
+    sensitive,
+    editing,
+    masks: count,
+    roi,
+    mask_present: !!document.getElementById(maskId),
+  };
 }

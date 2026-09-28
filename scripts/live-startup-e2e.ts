@@ -141,6 +141,20 @@ try {
   await page.locator('#token').fill(token);
   await page.locator('#connect').click();
   await page.getByText('프로그램 연결됨', { exact: true }).waitFor();
+  await page.locator('#resume').click();
+  await page.locator('#sample').click();
+  await page
+    .getByText('분석 완료. 아래 관심 목록과 DEBUG를 확인하세요.', {
+      exact: true,
+    })
+    .waitFor({ timeout: 45000 });
+  assert((await page.locator('#detections tr').count()) > 0);
+  assert((await page.locator('#history tr').count()) > 0);
+  assert.equal(await page.locator('#__omni_live_widget').count(), 0);
+  evidence.cases.push({
+    name: 'manual_sample_inspector_without_self_capture',
+    pass: true,
+  });
   // Password field is empty before a synthetic UI screenshot; no pairing secret is recorded.
   await page.locator('#token').fill('');
   await page.screenshot({

@@ -101,13 +101,10 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     });
     if (!stateResponse.ok) throw new Error('PAIRING_REQUIRED');
     const state = await stateResponse.json();
-    if (
-      !state.running ||
-      inFlight ||
-      state.busy ||
-      Date.now() - lastFrame < state.interval_seconds * 1000
-    )
-      return { state };
+    if (!state.running) return { state };
+    if (inFlight || state.busy) return { state, retry_after_ms: 250 };
+    const remaining = state.interval_seconds * 1000 - (Date.now() - lastFrame);
+    if (remaining > 0) return { state, retry_after_ms: remaining };
     inFlight = true;
     let image: string | undefined;
     try {
@@ -173,6 +170,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         quality: 80,
       });
       const capture_ms = performance.now() - start;
+      const captured_at = new Date().toISOString();
       const after = await chrome.tabs.get(tabId);
       const [{ result: afterGuard }] = await chrome.scripting.executeScript({
         target: { tabId },
@@ -187,6 +185,9 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         !afterGuard ||
         afterGuard.sensitive ||
         afterGuard.editing ||
+        !afterGuard.mask_present ||
+        afterGuard.url !== guard.url ||
+        JSON.stringify(afterGuard.roi) !== JSON.stringify(prepared.roi) ||
         !(await chrome.windows.get(tab.windowId)).focused
       )
         throw new Error('NAVIGATION_CHANGED');
@@ -204,10 +205,27 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
           domain: new URL(guard.url).hostname,
           capture_ms,
           source: 'chrome_periodic',
+          captured_at,
+          masked_regions: prepared.masks,
+          roi: prepared.roi,
         }),
       });
       if (!response.ok) throw new Error(`ANALYSIS_${response.status}`);
       return { state: await response.json(), decision, masks: prepared.masks };
+    } catch (error) {
+      const reason =
+        error instanceof Error && error.message === 'NAVIGATION_CHANGED'
+          ? 'navigation_changed'
+          : 'capture_failed';
+      try {
+        await fetch(base + '/live/skip', {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ reason: [reason] }),
+          signal: AbortSignal.timeout(1500),
+        });
+      } catch {}
+      return { error: `분석 제외: ${reason} · 다음 주기에 재시도`, state };
     } finally {
       image = undefined;
       inFlight = false;

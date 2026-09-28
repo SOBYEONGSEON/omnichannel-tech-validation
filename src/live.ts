@@ -3,6 +3,11 @@ import { createHash, randomUUID } from 'node:crypto';
 import { cpus } from 'node:os';
 import { analyzeImage } from './vision.js';
 import { addExposure, sensitiveUrl, type Exposure } from './live-policy.js';
+import {
+  DEFAULT_INTERVAL_SECONDS,
+  MIN_INTERVAL_SECONDS,
+  MIN_FRAME_GAP_MS,
+} from './capture-cadence.js';
 
 const interests = new Map<string, Exposure>();
 let generation = 0;
@@ -15,7 +20,7 @@ let cache: {
 const state = {
   session_id: randomUUID(),
   running: true,
-  interval_seconds: 10,
+  interval_seconds: DEFAULT_INTERVAL_SECONDS,
   frames: 0,
   skipped: 0,
   status: '프로그램 시작됨 · 확장 프로그램 연결 대기',
@@ -25,6 +30,7 @@ const state = {
 const samples: { total_ms: number; cpu_percent: number; memory_mb: number }[] =
   [];
 const events: { timestamp: string; capture: boolean; reason: string[] }[] = [];
+const history: Record<string, unknown>[] = [];
 export function liveState() {
   addExposure(interests, [], '', Date.now());
   return {
@@ -35,6 +41,7 @@ export function liveState() {
     ),
     samples,
     events,
+    history,
     storage:
       '프로세스 RAM · 관심 데이터 30분 TTL · 최대 100개 · 프로그램 종료 시 삭제',
     discarded: [
@@ -52,7 +59,12 @@ export function controlLive(input: unknown) {
   const control = z
     .object({
       action: z.enum(['pause', 'resume', 'clear', 'interval']),
-      interval_seconds: z.number().int().min(5).max(60).optional(),
+      interval_seconds: z
+        .number()
+        .int()
+        .min(MIN_INTERVAL_SECONDS)
+        .max(60)
+        .optional(),
     })
     .strict()
     .parse(input);
@@ -73,11 +85,13 @@ export function controlLive(input: unknown) {
     cache = null;
     samples.length = 0;
     events.length = 0;
+    history.length = 0;
     state.latest = null;
     state.frames = 0;
     state.skipped = 0;
     state.last_error = null;
     state.session_id = randomUUID();
+    state.status = state.running ? '기록 삭제 · 다음 분석 대기' : '일시정지';
   }
   return liveState();
 }
@@ -119,11 +133,24 @@ const frameSchema = z
       .regex(/^(?:[a-z0-9-]+\.)*[a-z0-9-]+$/i),
     capture_ms: z.number().min(0).max(60000),
     source: z.enum(['chrome_periodic', 'manual_test']),
+    captured_at: z.string().datetime().optional(),
+    masked_regions: z.number().int().min(0).max(10000).optional(),
+    roi: z
+      .object({
+        left: z.number().min(0).max(10000),
+        top: z.number().min(0).max(10000),
+        width: z.number().positive().max(10000),
+        height: z.number().positive().max(10000),
+        viewport_width: z.number().positive().max(10000),
+        viewport_height: z.number().positive().max(10000),
+      })
+      .strict()
+      .optional(),
   })
   .strict();
 export async function observeFrame(input: unknown) {
   if (!state.running) return { status: 409, body: { error: 'PAUSED' } };
-  if (busy || Date.now() - lastStart < 4000)
+  if (busy || Date.now() - lastStart < MIN_FRAME_GAP_MS)
     return { status: 429, body: { error: 'BUSY_OR_RATE_LIMIT' } };
   const frame = frameSchema.parse(input);
   if (sensitiveUrl(`https://${frame.domain}/`))
@@ -135,9 +162,14 @@ export async function observeFrame(input: unknown) {
   const cpu = process.cpuUsage();
   state.status = '이미지 분석 중';
   try {
-    const hash = createHash('sha256').update(frame.image).digest('hex');
+    const hash = createHash('sha256')
+      .update(frame.image)
+      .update(JSON.stringify(frame.roi || null))
+      .digest('hex');
     const cached = cache?.hash === hash;
-    const result = cached ? cache!.result : await analyzeImage(frame.image);
+    const result = cached
+      ? cache!.result
+      : await analyzeImage(frame.image, { roi: frame.roi });
     // Pause/erase during inference must not repopulate deleted data.
     if (currentGeneration !== generation || !state.running)
       return { status: 409, body: { error: 'CANCELLED' } };
@@ -145,10 +177,16 @@ export async function observeFrame(input: unknown) {
     const terms = result.terms.map((term) => ({
       key: `term:${term.toLowerCase()}`,
       label: term,
-      confidence: 0.7,
+      confidence: result.ocr_confidence ?? 0,
       source: 'ocr_dictionary' as const,
     }));
-    addExposure(interests, [...result.objects, ...terms], frame.domain);
+    addExposure(
+      interests,
+      [...result.objects, ...terms],
+      frame.domain,
+      Date.now(),
+      !cached,
+    );
     const elapsed = performance.now() - start;
     const used = process.cpuUsage(cpu);
     const metrics = {
@@ -169,6 +207,8 @@ export async function observeFrame(input: unknown) {
     state.status = '분석 완료 · 다음 주기 대기';
     state.latest = {
       timestamp: new Date().toISOString(),
+      captured_at: frame.captured_at || null,
+      frame_number: state.frames,
       domain: frame.domain,
       source: frame.source,
       capture: true,
@@ -182,8 +222,21 @@ export async function observeFrame(input: unknown) {
       ),
       cache_hit: cached,
       objects: result.objects,
+      input: result.input || null,
+      masked_regions: frame.masked_regions ?? 0,
+      object_evidence: result.objects.map((o) => ({
+        ...o,
+        meaning: '사물 종류 후보 · 브랜드/상품 모델명 미확인',
+      })),
       product_terms: result.terms,
+      term_evidence: terms.map((t) => ({
+        ...t,
+        meaning:
+          '화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인',
+      })),
+      ocr_confidence: result.ocr_confidence ?? null,
       ignored_objects: result.ignored_objects,
+      duplicates_removed: result.duplicates_removed ?? 0,
       ocr_error: result.ocr_error,
       timings: cached
         ? { preprocess_ms: 0, detection_ms: 0, ocr_ms: 0, ...metrics }
@@ -199,6 +252,8 @@ export async function observeFrame(input: unknown) {
         ...result.terms,
       ].slice(0, 8),
     };
+    history.push({ ...state.latest });
+    if (history.length > 30) history.shift();
     events.push({
       timestamp: new Date().toISOString(),
       capture: true,

@@ -513,8 +513,8 @@
     "errors": []
   },
   "unit": {
-    "tests": 64,
-    "passed": 64,
+    "tests": 99,
+    "passed": 99,
     "failed": 0,
     "success": true
   },
@@ -953,8 +953,8 @@
     "timestamp": "2026-09-27T17:06:26.361Z",
     "pass": true,
     "unit_tests": {
-      "passed": 64,
-      "total": 64
+      "passed": 99,
+      "total": 99
     },
     "cases": [
       {
@@ -1037,6 +1037,10 @@
       {
         "name": "widget_stop_disables_and_erases",
         "pass": true
+      },
+      {
+        "name": "manual_sample_inspector_without_self_capture",
+        "pass": true
       }
     ],
     "repeat": {
@@ -1048,5 +1052,163 @@
     "permission_note": "Fresh headless Chromium profile, TEST ONLY manifest pregrants host access. Chrome initial optional permission dialog remains a manual step.",
     "social_note": "Non-shopping feed fixture tested; logged-in Instagram/YouTube sessions not tested.",
     "accuracy_note": "Remote control identification verified on one public image and its fixture screenshot; not a general object-recognition accuracy dataset."
+  },
+  "realtime_v03": {
+    "pass": true,
+    "cases": [
+      {
+        "name": "privacy_masks_paint_and_cleanup",
+        "pass": true,
+        "detail": {
+          "masked_regions": 2,
+          "pixel": [
+            17,
+            17,
+            17
+          ]
+        }
+      },
+      {
+        "name": "old_mask_timeout_cannot_remove_new_capture_mask",
+        "pass": true
+      },
+      {
+        "name": "one_second_periodic_60_actual_captures",
+        "pass": true,
+        "detail": {
+          "frames": 60,
+          "p95_gap_ms": 1015
+        }
+      },
+      {
+        "name": "changing_scene_30_fresh_inferences",
+        "pass": true,
+        "detail": {
+          "frames": 30,
+          "fresh_remote": 30
+        }
+      },
+      {
+        "name": "password_page_no_screenshots",
+        "pass": true
+      },
+      {
+        "name": "typing_no_screenshots",
+        "pass": true
+      },
+      {
+        "name": "spa_direct_route_blocked_and_return_resumes",
+        "pass": true
+      },
+      {
+        "name": "capture_failure_logged_then_recovers",
+        "pass": true
+      },
+      {
+        "name": "invalid_image_returns_error_then_recovers",
+        "pass": true
+      },
+      {
+        "name": "backend_stop_prevents_capture_restart_resumes",
+        "pass": true
+      },
+      {
+        "name": "inspector_rows_positions_history_and_export",
+        "pass": true
+      },
+      {
+        "name": "public_article",
+        "pass": true
+      },
+      {
+        "name": "visible_password",
+        "pass": true
+      },
+      {
+        "name": "hidden_password",
+        "pass": true
+      },
+      {
+        "name": "offscreen_password",
+        "pass": true
+      },
+      {
+        "name": "credit_card",
+        "pass": true
+      },
+      {
+        "name": "otp",
+        "pass": true
+      },
+      {
+        "name": "editable",
+        "pass": true
+      },
+      {
+        "name": "input_focus",
+        "pass": true
+      },
+      {
+        "name": "iframe_mask",
+        "pass": true
+      },
+      {
+        "name": "pii_mask",
+        "pass": true
+      },
+      {
+        "name": "legacy_widget_hidden",
+        "pass": true
+      },
+      {
+        "name": "no_media_fallback",
+        "pass": true
+      },
+      {
+        "name": "media_union_DPR_1",
+        "pass": true,
+        "roi": {
+          "left": 100,
+          "top": 120,
+          "width": 700,
+          "height": 300,
+          "viewport_width": 1000,
+          "viewport_height": 800
+        }
+      },
+      {
+        "name": "media_union_DPR_1.25",
+        "pass": true,
+        "roi": {
+          "left": 100,
+          "top": 120,
+          "width": 700,
+          "height": 300,
+          "viewport_width": 1000,
+          "viewport_height": 800
+        }
+      },
+      {
+        "name": "media_union_DPR_2",
+        "pass": true,
+        "roi": {
+          "left": 100,
+          "top": 120,
+          "width": 700,
+          "height": 300,
+          "viewport_width": 1000,
+          "viewport_height": 800
+        }
+      }
+    ],
+    "errors": [],
+    "unit": {
+      "passed": 99,
+      "total": 99
+    },
+    "phrase_before": 7,
+    "phrase_after": 15,
+    "phrase_total": 15,
+    "precision_note": "Detection metrics are object-level IoU >=0.5 on 32 public images rendered at two sizes, NOT real browsing or SKU accuracy. COCO128 is a training subset that may overlap pretrained-model data. Candidate design iterations inspected multiple split results; reserved is not an untouched final blind test."
   }
 }

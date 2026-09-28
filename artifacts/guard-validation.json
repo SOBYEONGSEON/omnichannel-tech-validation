@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-09-28T02:10:51.072Z",
+  "cases": [
+    {
+      "name": "public_article",
+      "pass": true
+    },
+    {
+      "name": "visible_password",
+      "pass": true
+    },
+    {
+      "name": "hidden_password",
+      "pass": true
+    },
+    {
+      "name": "offscreen_password",
+      "pass": true
+    },
+    {
+      "name": "credit_card",
+      "pass": true
+    },
+    {
+      "name": "otp",
+      "pass": true
+    },
+    {
+      "name": "editable",
+      "pass": true
+    },
+    {
+      "name": "input_focus",
+      "pass": true
+    },
+    {
+      "name": "iframe_mask",
+      "pass": true
+    },
+    {
+      "name": "pii_mask",
+      "pass": true
+    },
+    {
+      "name": "legacy_widget_hidden",
+      "pass": true
+    },
+    {
+      "name": "no_media_fallback",
+      "pass": true
+    },
+    {
+      "name": "media_union_DPR_1",
+      "pass": true,
+      "roi": {
+        "left": 100,
+        "top": 120,
+        "width": 700,
+        "height": 300,
+        "viewport_width": 1000,
+        "viewport_height": 800
+      }
+    },
+    {
+      "name": "media_union_DPR_1.25",
+      "pass": true,
+      "roi": {
+        "left": 100,
+        "top": 120,
+        "width": 700,
+        "height": 300,
+        "viewport_width": 1000,
+        "viewport_height": 800
+      }
+    },
+    {
+      "name": "media_union_DPR_2",
+      "pass": true,
+      "roi": {
+        "left": 100,
+        "top": 120,
+        "width": 700,
+        "height": 300,
+        "viewport_width": 1000,
+        "viewport_height": 800
+      }
+    }
+  ],
+  "pass": true
+}

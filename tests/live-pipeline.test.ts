@@ -89,7 +89,33 @@ describe('live pipeline storage and cancellation', () => {
       observeFrame({ ...image, domain: '../../private' }),
     ).rejects.toThrow();
     expect(() =>
-      controlLive({ action: 'interval', interval_seconds: 1 }),
+      controlLive({ action: 'interval', interval_seconds: 0 }),
     ).toThrow();
+  });
+  it('allows one-second frames and keeps cached observations separate from fresh evidence', async () => {
+    controlLive({ action: 'interval', interval_seconds: 1 });
+    await observeFrame(image);
+    vi.setSystemTime(Date.now() + 1000);
+    expect((await observeFrame(image)).status).toBe(200);
+    expect(liveState().interests[0].independent_frames).toBe(1);
+    expect(liveState().interests[0].status).toBe('candidate');
+    expect(liveState().history).toHaveLength(2);
+    expect(JSON.stringify(liveState().history)).not.toContain('data:image');
+  });
+  it('includes region in cache key and does not reuse different crops', async () => {
+    await observeFrame(image);
+    vi.setSystemTime(Date.now() + 1000);
+    await observeFrame({
+      ...image,
+      roi: {
+        left: 0,
+        top: 0,
+        width: 400,
+        height: 300,
+        viewport_width: 1100,
+        viewport_height: 800,
+      },
+    });
+    expect(vision.analyze).toHaveBeenCalledTimes(2);
   });
 });

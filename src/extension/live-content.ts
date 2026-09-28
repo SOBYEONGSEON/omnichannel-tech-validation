@@ -1,4 +1,10 @@
+import { nextCaptureDelay } from '../capture-cadence.js';
 (() => {
+  if (
+    location.origin === 'http://127.0.0.1:8787' &&
+    ['/', '/live'].includes(location.pathname)
+  )
+    return;
   if (document.getElementById('__omni_live_widget')) return;
   const host = document.createElement('aside');
   host.id = '__omni_live_widget';
@@ -39,6 +45,7 @@
   });
   async function tick() {
     if (stopped) return;
+    const tickStart = performance.now();
     let delay = 2000;
     try {
       // Never submit background tabs. Backend must be alive before a frame is taken.
@@ -58,14 +65,24 @@
             ? `캡처 제외: ${response.decision.reason.join(', ')}`
             : state?.status || '연결 대기');
         if (state) {
-          delay = state.interval_seconds * 1000;
+          delay = nextCaptureDelay(
+            state.interval_seconds,
+            performance.now() - tickStart,
+          );
+          if (typeof response.retry_after_ms === 'number')
+            delay = Math.max(100, response.retry_after_ms);
           counts.textContent = `${state.interval_seconds}초 간격 · 분석 ${state.frames}회 · 제외 ${state.skipped}회`;
           objects.textContent =
             state.interests
               .slice(0, 4)
               .map(
-                (item: { label: string; observations: number }) =>
-                  `${item.label} ${item.observations}회`,
+                (item: {
+                  label: string;
+                  observations: number;
+                  confidence: number;
+                  independent_frames: number;
+                }) =>
+                  `${item.label} · ${(item.confidence * 100).toFixed(0)}% · ${item.observations}회 (새 추론 ${item.independent_frames}회)`,
               )
               .join(' / ') || '아직 감지한 사물이 없습니다';
         }

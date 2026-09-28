@@ -1,0 +1,5298 @@
+{
+  "timestamp": "2026-09-28T02:06:01.860Z",
+  "cases": [
+    {
+      "name": "privacy_masks_paint_and_cleanup",
+      "pass": true,
+      "detail": {
+        "masked_regions": 2,
+        "pixel": [
+          17,
+          17,
+          17
+        ]
+      }
+    },
+    {
+      "name": "old_mask_timeout_cannot_remove_new_capture_mask",
+      "pass": true
+    },
+    {
+      "name": "one_second_periodic_60_actual_captures",
+      "pass": true,
+      "detail": {
+        "frames": 60,
+        "p95_gap_ms": 1015
+      }
+    },
+    {
+      "name": "changing_scene_30_fresh_inferences",
+      "pass": true,
+      "detail": {
+        "frames": 30,
+        "fresh_remote": 30
+      }
+    },
+    {
+      "name": "password_page_no_screenshots",
+      "pass": true
+    },
+    {
+      "name": "typing_no_screenshots",
+      "pass": true
+    },
+    {
+      "name": "spa_direct_route_blocked_and_return_resumes",
+      "pass": true
+    },
+    {
+      "name": "capture_failure_logged_then_recovers",
+      "pass": true
+    },
+    {
+      "name": "invalid_image_returns_error_then_recovers",
+      "pass": true
+    },
+    {
+      "name": "backend_stop_prevents_capture_restart_resumes",
+      "pass": true
+    },
+    {
+      "name": "inspector_rows_positions_history_and_export",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "permission_note": "Isolated Chromium profile with TEST ONLY host permissions, public/synthetic fixtures only. No logged-in social account used.",
+  "static": {
+    "frames": 60,
+    "interval_ms": {
+      "count": 59,
+      "average": 1009.3559322033898,
+      "median": 1012,
+      "p50": 1012,
+      "p95": 1015,
+      "maximum": 1019
+    },
+    "samples": [
+      {
+        "total_ms": 872.0933,
+        "capture_ms": 15.400000000372529,
+        "cpu_percent": 11.989829528560762,
+        "memory_mb": 546.71484375
+      },
+      {
+        "total_ms": 0.16759999999976571,
+        "capture_ms": 11.099999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 447.03515625
+      },
+      {
+        "total_ms": 0.14789999999993597,
+        "capture_ms": 8.799999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 448.40234375
+      },
+      {
+        "total_ms": 0.14529999999922438,
+        "capture_ms": 11.600000000558794,
+        "cpu_percent": 0,
+        "memory_mb": 449.19921875
+      },
+      {
+        "total_ms": 0.13760000000002037,
+        "capture_ms": 11.299999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 450
+      },
+      {
+        "total_ms": 0.17549999999937427,
+        "capture_ms": 9.199999999254942,
+        "cpu_percent": 0,
+        "memory_mb": 450.96875
+      },
+      {
+        "total_ms": 0.1728000000002794,
+        "capture_ms": 11.599999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 278.62890625
+      },
+      {
+        "total_ms": 0.14329999999972642,
+        "capture_ms": 11.800000000745058,
+        "cpu_percent": 0,
+        "memory_mb": 279.1328125
+      },
+      {
+        "total_ms": 0.1433999999990192,
+        "capture_ms": 11,
+        "cpu_percent": 0,
+        "memory_mb": 279.01171875
+      },
+      {
+        "total_ms": 0.13400000000001455,
+        "capture_ms": 11.299999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 270.09375
+      },
+      {
+        "total_ms": 0.14289999999891734,
+        "capture_ms": 11.600000000558794,
+        "cpu_percent": 0,
+        "memory_mb": 270.390625
+      },
+      {
+        "total_ms": 0.14470000000073924,
+        "capture_ms": 11.299999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 270.2265625
+      },
+      {
+        "total_ms": 0.14089999999850988,
+        "capture_ms": 9.5,
+        "cpu_percent": 0,
+        "memory_mb": 270.3671875
+      },
+      {
+        "total_ms": 0.14389999999912106,
+        "capture_ms": 10.900000000372529,
+        "cpu_percent": 0,
+        "memory_mb": 270.671875
+      },
+      {
+        "total_ms": 0.13910000000032596,
+        "capture_ms": 10.099999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 270.6015625
+      },
+      {
+        "total_ms": 0.1484999999993306,
+        "capture_ms": 11.100000000558794,
+        "cpu_percent": 0,
+        "memory_mb": 261.4921875
+      },
+      {
+        "total_ms": 0.14789999999993597,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 261.75390625
+      },
+      {
+        "total_ms": 0.13030000000071595,
+        "capture_ms": 11.600000000558794,
+        "cpu_percent": 0,
+        "memory_mb": 262.28515625
+      },
+      {
+        "total_ms": 0.14679999999862048,
+        "capture_ms": 9.5,
+        "cpu_percent": 0,
+        "memory_mb": 262.31640625
+      },
+      {
+        "total_ms": 0.13180000000284053,
+        "capture_ms": 11.5,
+        "cpu_percent": 0,
+        "memory_mb": 262.48046875
+      },
+      {
+        "total_ms": 0.1444999999985157,
+        "capture_ms": 9,
+        "cpu_percent": 0,
+        "memory_mb": 262.48828125
+      },
+      {
+        "total_ms": 0.14110000000073342,
+        "capture_ms": 11.400000000372529,
+        "cpu_percent": 0,
+        "memory_mb": 262.59375
+      },
+      {
+        "total_ms": 0.1404999999977008,
+        "capture_ms": 11.299999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 262.7265625
+      },
+      {
+        "total_ms": 0.12930000000051223,
+        "capture_ms": 11.099999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 262.73046875
+      },
+      {
+        "total_ms": 0.16259999999965657,
+        "capture_ms": 13.400000000372529,
+        "cpu_percent": 0,
+        "memory_mb": 263.33203125
+      },
+      {
+        "total_ms": 0.13999999999941792,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 263.67578125
+      },
+      {
+        "total_ms": 0.1396999999997206,
+        "capture_ms": 12,
+        "cpu_percent": 0,
+        "memory_mb": 263.31640625
+      },
+      {
+        "total_ms": 0.129400000001624,
+        "capture_ms": 11.899999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 263.59375
+      },
+      {
+        "total_ms": 0.1353000000017346,
+        "capture_ms": 11.600000000558794,
+        "cpu_percent": 0,
+        "memory_mb": 263.97265625
+      },
+      {
+        "total_ms": 0.13559999999779393,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 263.53125
+      },
+      {
+        "total_ms": 0.12669999999343418,
+        "capture_ms": 11.899999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 263.9765625
+      },
+      {
+        "total_ms": 0.1466999999975087,
+        "capture_ms": 9.599999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 264.2890625
+      },
+      {
+        "total_ms": 0.1361999999935506,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 263.94921875
+      },
+      {
+        "total_ms": 0.13210000000253785,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 264.43359375
+      },
+      {
+        "total_ms": 0.14719999999942956,
+        "capture_ms": 10.299999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 264.08203125
+      },
+      {
+        "total_ms": 0.13109999999869615,
+        "capture_ms": 11.100000000558794,
+        "cpu_percent": 0,
+        "memory_mb": 265.46875
+      },
+      {
+        "total_ms": 0.13799999999901047,
+        "capture_ms": 11.299999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 265.12109375
+      },
+      {
+        "total_ms": 0.12440000000060536,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 265.60546875
+      },
+      {
+        "total_ms": 0.13799999999901047,
+        "capture_ms": 11.799999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 265.31640625
+      },
+      {
+        "total_ms": 0.14100000000325963,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 265.796875
+      },
+      {
+        "total_ms": 0.12110000000393484,
+        "capture_ms": 17.59999999962747,
+        "cpu_percent": 0,
+        "memory_mb": 265.4453125
+      },
+      {
+        "total_ms": 0.12629999999626307,
+        "capture_ms": 11.899999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 265.76953125
+      },
+      {
+        "total_ms": 0.12829999999667052,
+        "capture_ms": 10.5,
+        "cpu_percent": 0,
+        "memory_mb": 265.296875
+      },
+      {
+        "total_ms": 0.13330000000132713,
+        "capture_ms": 11.700000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 265.77734375
+      },
+      {
+        "total_ms": 0.1287000000011176,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 265.296875
+      },
+      {
+        "total_ms": 0.12100000000646105,
+        "capture_ms": 10.599999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 265.78125
+      },
+      {
+        "total_ms": 0.13550000000395812,
+        "capture_ms": 11.5,
+        "cpu_percent": 0,
+        "memory_mb": 265.3046875
+      },
+      {
+        "total_ms": 0.12269999999989523,
+        "capture_ms": 11,
+        "cpu_percent": 0,
+        "memory_mb": 265.78515625
+      },
+      {
+        "total_ms": 0.12470000000030268,
+        "capture_ms": 9.799999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 265.3046875
+      },
+      {
+        "total_ms": 0.13590000000112923,
+        "capture_ms": 12.100000000558794,
+        "cpu_percent": 0,
+        "memory_mb": 265.75390625
+      },
+      {
+        "total_ms": 0.1301999999996042,
+        "capture_ms": 11.799999999813735,
+        "cpu_percent": 0,
+        "memory_mb": 265.5
+      },
+      {
+        "total_ms": 0.17160000000149012,
+        "capture_ms": 9.700000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 265.953125
+      },
+      {
+        "total_ms": 0.1352000000042608,
+        "capture_ms": 11.199999999254942,
+        "cpu_percent": 0,
+        "memory_mb": 265.6328125
+      },
+      {
+        "total_ms": 0.12589999999909196,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 266.08984375
+      },
+      {
+        "total_ms": 0.1311000000059721,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 0,
+        "memory_mb": 265.76171875
+      },
+      {
+        "total_ms": 0.12210000000050059,
+        "capture_ms": 11.599999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 266.21875
+      },
+      {
+        "total_ms": 0.12619999999878928,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 265.84375
+      },
+      {
+        "total_ms": 0.127200000002631,
+        "capture_ms": 11.099999999627471,
+        "cpu_percent": 0,
+        "memory_mb": 266.13671875
+      },
+      {
+        "total_ms": 0.14010000000416767,
+        "capture_ms": 11.700000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 266.62890625
+      },
+      {
+        "total_ms": 0.13180000000284053,
+        "capture_ms": 11.700000000186265,
+        "cpu_percent": 0,
+        "memory_mb": 266.44140625
+      }
+    ]
+  },
+  "changing": {
+    "frames": 30,
+    "samples": [
+      {
+        "total_ms": 725.2658999999985,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 11.452696176671227,
+        "memory_mb": 487.1796875
+      },
+      {
+        "total_ms": 679.3706999999995,
+        "capture_ms": 9.5,
+        "cpu_percent": 10.340451832850615,
+        "memory_mb": 456.81640625
+      },
+      {
+        "total_ms": 703.5183000000106,
+        "capture_ms": 12,
+        "cpu_percent": 11.238158268235354,
+        "memory_mb": 517.0703125
+      },
+      {
+        "total_ms": 649.6760000000068,
+        "capture_ms": 8.599999999627471,
+        "cpu_percent": 13.093064850787025,
+        "memory_mb": 499.78515625
+      },
+      {
+        "total_ms": 694.8590000000113,
+        "capture_ms": 11.099999999627471,
+        "cpu_percent": 13.482951217441016,
+        "memory_mb": 496.23046875
+      },
+      {
+        "total_ms": 704.5617999999959,
+        "capture_ms": 11.799999999813735,
+        "cpu_percent": 11.922304047707453,
+        "memory_mb": 478.9765625
+      },
+      {
+        "total_ms": 676.4548000000068,
+        "capture_ms": 10.800000000745058,
+        "cpu_percent": 11.835602319622716,
+        "memory_mb": 509.5234375
+      },
+      {
+        "total_ms": 656.2768999999971,
+        "capture_ms": 11.400000000372529,
+        "cpu_percent": 10.418620554829875,
+        "memory_mb": 503.30078125
+      },
+      {
+        "total_ms": 695.7813999999926,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 11.22838293751469,
+        "memory_mb": 511.62890625
+      },
+      {
+        "total_ms": 674.7692000000097,
+        "capture_ms": 11.700000000186265,
+        "cpu_percent": 11.58729533001786,
+        "memory_mb": 501.546875
+      },
+      {
+        "total_ms": 702.2859000000026,
+        "capture_ms": 11.299999999813735,
+        "cpu_percent": 11.809649033249805,
+        "memory_mb": 506.046875
+      },
+      {
+        "total_ms": 677.4007999999885,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 10.813391422035705,
+        "memory_mb": 505.23828125
+      },
+      {
+        "total_ms": 677.4833000000071,
+        "capture_ms": 8.699999999254942,
+        "cpu_percent": 10.378484606188708,
+        "memory_mb": 484.7734375
+      },
+      {
+        "total_ms": 677.1977999999945,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 11.822616671229683,
+        "memory_mb": 477.0703125
+      },
+      {
+        "total_ms": 677.2877000000008,
+        "capture_ms": 11.5,
+        "cpu_percent": 10.953616904603452,
+        "memory_mb": 530.95703125
+      },
+      {
+        "total_ms": 676.2419999999984,
+        "capture_ms": 9.300000000745058,
+        "cpu_percent": 11.83932674989134,
+        "memory_mb": 518.03125
+      },
+      {
+        "total_ms": 697.6037999999971,
+        "capture_ms": 11.700000000186265,
+        "cpu_percent": 12.883387389804982,
+        "memory_mb": 514.390625
+      },
+      {
+        "total_ms": 672.5146000000095,
+        "capture_ms": 12.200000000186265,
+        "cpu_percent": 11.914239482681694,
+        "memory_mb": 527.34765625
+      },
+      {
+        "total_ms": 676.8990000000049,
+        "capture_ms": 9.399999999441206,
+        "cpu_percent": 11.107639396719371,
+        "memory_mb": 524.19140625
+      },
+      {
+        "total_ms": 694.678899999999,
+        "capture_ms": 11.099999999627471,
+        "cpu_percent": 11.669060338524766,
+        "memory_mb": 499.43359375
+      },
+      {
+        "total_ms": 666.9980999999971,
+        "capture_ms": 11.600000000558794,
+        "cpu_percent": 13.624476591462614,
+        "memory_mb": 522.6953125
+      },
+      {
+        "total_ms": 666.8923000000068,
+        "capture_ms": 11.600000000558794,
+        "cpu_percent": 12.586365144716643,
+        "memory_mb": 523.98046875
+      },
+      {
+        "total_ms": 677.3390999999974,
+        "capture_ms": 10.899999999441206,
+        "cpu_percent": 12.253832681444244,
+        "memory_mb": 509.0859375
+      },
+      {
+        "total_ms": 675.3111999999965,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 10.856106044146815,
+        "memory_mb": 541.5234375
+      },
+      {
+        "total_ms": 676.3822999999975,
+        "capture_ms": 11.900000000372529,
+        "cpu_percent": 13.139758388118722,
+        "memory_mb": 522.10546875
+      },
+      {
+        "total_ms": 696.9740999999922,
+        "capture_ms": 11.200000000186265,
+        "cpu_percent": 12.043130440571744,
+        "memory_mb": 521.3828125
+      },
+      {
+        "total_ms": 667.8683000000019,
+        "capture_ms": 9.099999999627471,
+        "cpu_percent": 10.677629107415308,
+        "memory_mb": 522.7734375
+      },
+      {
+        "total_ms": 700.7160000000003,
+        "capture_ms": 11.399999999441206,
+        "cpu_percent": 10.87280724287728,
+        "memory_mb": 525.0234375
+      },
+      {
+        "total_ms": 675.5139000000054,
+        "capture_ms": 11.400000000372529,
+        "cpu_percent": 13.008614626582709,
+        "memory_mb": 537.28515625
+      },
+      {
+        "total_ms": 695.1781999999948,
+        "capture_ms": 11.400000000372529,
+        "cpu_percent": 10.267151645434296,
+        "memory_mb": 535.2734375
+      }
+    ],
+    "history": [
+      {
+        "timestamp": "2026-09-28T02:07:07.662Z",
+        "captured_at": "2026-09-28T02:07:06.933Z",
+        "frame_number": 1,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100350,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9882413744926453,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3218534903092818,
+              "ymin": 0.21771419525146485,
+              "xmax": 0.35554373481056906,
+              "ymax": 0.3432298999362522
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7805590033531189,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02038726806640625,
+              "ymin": 0.16763656616210937,
+              "xmax": 0.6020794261585583,
+              "ymax": 0.6749525621202257
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9970954060554504,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05831199125810103,
+              "ymin": 0.21136928346421985,
+              "xmax": 0.17986872412941673,
+              "ymax": 0.26519260618421764
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9882413744926453,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3218534903092818,
+              "ymin": 0.21771419525146485,
+              "xmax": 0.35554373481056906,
+              "ymax": 0.3432298999362522
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7805590033531189,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02038726806640625,
+              "ymin": 0.16763656616210937,
+              "xmax": 0.6020794261585583,
+              "ymax": 0.6749525621202257
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9970954060554504,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05831199125810103,
+              "ymin": 0.21136928346421985,
+              "xmax": 0.17986872412941673,
+              "ymax": 0.26519260618421764
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.33910000000469,
+          "detection_ms": 257.8922999999995,
+          "ocr_ms": 444.7740000000049,
+          "total_ms": 725.2658999999985,
+          "capture_ms": 11.200000000186265,
+          "cpu_percent": 11.452696176671227,
+          "memory_mb": 487.1796875
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:09.619Z",
+        "captured_at": "2026-09-28T02:07:08.937Z",
+        "frame_number": 2,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100348,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873865842819214,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.322857666015625,
+              "ymin": 0.21966707653469508,
+              "xmax": 0.35783122669566764,
+              "ymax": 0.3444646644592285
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7653594017028809,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020353525335138494,
+              "ymin": 0.1672678968641493,
+              "xmax": 0.6020570581609552,
+              "ymax": 0.6750895521375868
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.996762216091156,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05780713341452859,
+              "ymin": 0.21232938978407118,
+              "xmax": 0.17754165476018732,
+              "ymax": 0.26484937879774306
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873865842819214,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.322857666015625,
+              "ymin": 0.21966707653469508,
+              "xmax": 0.35783122669566764,
+              "ymax": 0.3444646644592285
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7653594017028809,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020353525335138494,
+              "ymin": 0.1672678968641493,
+              "xmax": 0.6020570581609552,
+              "ymax": 0.6750895521375868
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.996762216091156,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05780713341452859,
+              "ymin": 0.21232938978407118,
+              "xmax": 0.17754165476018732,
+              "ymax": 0.26484937879774306
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.878700000001118,
+          "detection_ms": 231.39940000000934,
+          "ocr_ms": 425.8790000000008,
+          "total_ms": 679.3706999999995,
+          "capture_ms": 9.5,
+          "cpu_percent": 10.340451832850615,
+          "memory_mb": 456.81640625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:11.653Z",
+        "captured_at": "2026-09-28T02:07:10.946Z",
+        "frame_number": 3,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100350,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.987199604511261,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228960557417435,
+              "ymin": 0.2200196287367079,
+              "xmax": 0.35512551394375885,
+              "ymax": 0.34329381730821396
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8263261318206787,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020092287930575284,
+              "ymin": 0.16715311686197917,
+              "xmax": 0.6018201654607599,
+              "ymax": 0.674287363688151
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9950978755950928,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05828549645163796,
+              "ymin": 0.21098136054144964,
+              "xmax": 0.1843662522055886,
+              "ymax": 0.2628592088487413
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9425784349441528,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05710131038318981,
+              "ymin": 0.21289128409491645,
+              "xmax": 0.17960883920842952,
+              "ymax": 0.2661146397060818
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.987199604511261,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228960557417435,
+              "ymin": 0.2200196287367079,
+              "xmax": 0.35512551394375885,
+              "ymax": 0.34329381730821396
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8263261318206787,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020092287930575284,
+              "ymin": 0.16715311686197917,
+              "xmax": 0.6018201654607599,
+              "ymax": 0.674287363688151
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9950978755950928,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05828549645163796,
+              "ymin": 0.21098136054144964,
+              "xmax": 0.1843662522055886,
+              "ymax": 0.2628592088487413
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9425784349441528,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05710131038318981,
+              "ymin": 0.21289128409491645,
+              "xmax": 0.17960883920842952,
+              "ymax": 0.2661146397060818
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 23.276800000006915,
+          "detection_ms": 230.22329999999783,
+          "ocr_ms": 449.781799999997,
+          "total_ms": 703.5183000000106,
+          "capture_ms": 12,
+          "cpu_percent": 11.238158268235354,
+          "memory_mb": 517.0703125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:13.602Z",
+        "captured_at": "2026-09-28T02:07:12.949Z",
+        "frame_number": 4,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100332,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9663726687431335,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3220593105662953,
+              "ymin": 0.21732149336073134,
+              "xmax": 0.3559466708790172,
+              "ymax": 0.3430798975626628
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7773033380508423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020368229259144176,
+              "ymin": 0.16831969367133245,
+              "xmax": 0.6019947745583274,
+              "ymax": 0.6744663577609592
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9966846108436584,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05794459256258878,
+              "ymin": 0.21139004177517362,
+              "xmax": 0.17951417402787642,
+              "ymax": 0.26397301567925346
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9663726687431335,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3220593105662953,
+              "ymin": 0.21732149336073134,
+              "xmax": 0.3559466708790172,
+              "ymax": 0.3430798975626628
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7773033380508423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020368229259144176,
+              "ymin": 0.16831969367133245,
+              "xmax": 0.6019947745583274,
+              "ymax": 0.6744663577609592
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9966846108436584,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05794459256258878,
+              "ymin": 0.21139004177517362,
+              "xmax": 0.17951417402787642,
+              "ymax": 0.26397301567925346
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.150800000003073,
+          "detection_ms": 208.5158000000083,
+          "ocr_ms": 419.8143999999884,
+          "total_ms": 649.6760000000068,
+          "capture_ms": 8.599999999627471,
+          "cpu_percent": 13.093064850787025,
+          "memory_mb": 499.78515625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:15.663Z",
+        "captured_at": "2026-09-28T02:07:14.965Z",
+        "frame_number": 5,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100314,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9722614884376526,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32232431931929156,
+              "ymin": 0.21914300070868598,
+              "xmax": 0.3551381024447354,
+              "ymax": 0.341589166853163
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7585347294807434,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020233154296875,
+              "ymin": 0.1676219431559245,
+              "xmax": 0.6019681063565341,
+              "ymax": 0.6753365325927735
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7722527384757996,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02025635459206321,
+              "ymin": 0.12081609514024523,
+              "xmax": 0.601668999411843,
+              "ymax": 0.6661132515801323
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9967547059059143,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05904820182106712,
+              "ymin": 0.21169189029269747,
+              "xmax": 0.17931378104469992,
+              "ymax": 0.26402652740478516
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9722614884376526,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32232431931929156,
+              "ymin": 0.21914300070868598,
+              "xmax": 0.3551381024447354,
+              "ymax": 0.341589166853163
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7585347294807434,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020233154296875,
+              "ymin": 0.1676219431559245,
+              "xmax": 0.6019681063565341,
+              "ymax": 0.6753365325927735
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7722527384757996,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02025635459206321,
+              "ymin": 0.12081609514024523,
+              "xmax": 0.601668999411843,
+              "ymax": 0.6661132515801323
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9967547059059143,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05904820182106712,
+              "ymin": 0.21169189029269747,
+              "xmax": 0.17931378104469992,
+              "ymax": 0.26402652740478516
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.543799999999464,
+          "detection_ms": 235.70629999999073,
+          "ocr_ms": 436.4091000000044,
+          "total_ms": 694.8590000000113,
+          "capture_ms": 11.099999999627471,
+          "cpu_percent": 13.482951217441016,
+          "memory_mb": 496.23046875
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:17.679Z",
+        "captured_at": "2026-09-28T02:07:16.972Z",
+        "frame_number": 6,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100308,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.969761312007904,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3236779733137651,
+              "ymin": 0.21922957314385308,
+              "xmax": 0.355543717471036,
+              "ymax": 0.34243397394816083
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8346178531646729,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02021727128462358,
+              "ymin": 0.16468475341796876,
+              "xmax": 0.601900204745206,
+              "ymax": 0.6737190585666233
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7646765112876892,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02024177204478871,
+              "ymin": 0.12069722493489583,
+              "xmax": 0.6016973842274059,
+              "ymax": 0.668287353515625
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9956149458885193,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05801325711337003,
+              "ymin": 0.21061502244737412,
+              "xmax": 0.17920202775435015,
+              "ymax": 0.26343484666612416
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.969761312007904,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3236779733137651,
+              "ymin": 0.21922957314385308,
+              "xmax": 0.355543717471036,
+              "ymax": 0.34243397394816083
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8346178531646729,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02021727128462358,
+              "ymin": 0.16468475341796876,
+              "xmax": 0.601900204745206,
+              "ymax": 0.6737190585666233
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7646765112876892,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02024177204478871,
+              "ymin": 0.12069722493489583,
+              "xmax": 0.6016973842274059,
+              "ymax": 0.668287353515625
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9956149458885193,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05801325711337003,
+              "ymin": 0.21061502244737412,
+              "xmax": 0.17920202775435015,
+              "ymax": 0.26343484666612416
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 23.514100000000326,
+          "detection_ms": 234.67960000000312,
+          "ocr_ms": 446.15559999999823,
+          "total_ms": 704.5617999999959,
+          "capture_ms": 11.799999999813735,
+          "cpu_percent": 11.922304047707453,
+          "memory_mb": 478.9765625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:19.663Z",
+        "captured_at": "2026-09-28T02:07:18.983Z",
+        "frame_number": 7,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100320,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9797903299331665,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3215804186734286,
+              "ymin": 0.21944144778781466,
+              "xmax": 0.35514930378306997,
+              "ymax": 0.3465271970960829
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9973742365837097,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05897685831243342,
+              "ymin": 0.21245209587944877,
+              "xmax": 0.18624890934337268,
+              "ymax": 0.2652556440565321
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9797903299331665,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3215804186734286,
+              "ymin": 0.21944144778781466,
+              "xmax": 0.35514930378306997,
+              "ymax": 0.3465271970960829
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9973742365837097,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05897685831243342,
+              "ymin": 0.21245209587944877,
+              "xmax": 0.18624890934337268,
+              "ymax": 0.2652556440565321
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.44439999999304,
+          "detection_ms": 237.66429999998945,
+          "ocr_ms": 417.1195999999909,
+          "total_ms": 676.4548000000068,
+          "capture_ms": 10.800000000745058,
+          "cpu_percent": 11.835602319622716,
+          "memory_mb": 509.5234375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:21.662Z",
+        "captured_at": "2026-09-28T02:07:21.003Z",
+        "frame_number": 8,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100297,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9829878211021423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32186321778730914,
+              "ymin": 0.2160234154595269,
+              "xmax": 0.3550823471762917,
+              "ymax": 0.3433308410644531
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7948936223983765,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020399683172052558,
+              "ymin": 0.16374983469645182,
+              "xmax": 0.6021305431019176,
+              "ymax": 0.6754232745700413
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9944031238555908,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.0584808349609375,
+              "ymin": 0.21026493920220268,
+              "xmax": 0.18762581565163353,
+              "ymax": 0.26251573774549697
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9931296110153198,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.057422152432528406,
+              "ymin": 0.21188407686021593,
+              "xmax": 0.17828598022460937,
+              "ymax": 0.2643110932244195
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9829878211021423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32186321778730914,
+              "ymin": 0.2160234154595269,
+              "xmax": 0.3550823471762917,
+              "ymax": 0.3433308410644531
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7948936223983765,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020399683172052558,
+              "ymin": 0.16374983469645182,
+              "xmax": 0.6021305431019176,
+              "ymax": 0.6754232745700413
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9944031238555908,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.0584808349609375,
+              "ymin": 0.21026493920220268,
+              "xmax": 0.18762581565163353,
+              "ymax": 0.26251573774549697
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9931296110153198,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.057422152432528406,
+              "ymin": 0.21188407686021593,
+              "xmax": 0.17828598022460937,
+              "ymax": 0.2643110932244195
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 20.99880000000121,
+          "detection_ms": 213.81489999999758,
+          "ocr_ms": 421.2506999999896,
+          "total_ms": 656.2768999999971,
+          "capture_ms": 11.400000000372529,
+          "cpu_percent": 10.418620554829875,
+          "memory_mb": 503.30078125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:23.714Z",
+        "captured_at": "2026-09-28T02:07:23.015Z",
+        "frame_number": 9,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100331,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873571395874023,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32217552011663264,
+              "ymin": 0.21664731979370117,
+              "xmax": 0.3548124226656827,
+              "ymax": 0.34475691265530056
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9912808537483215,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.058045846765691585,
+              "ymin": 0.21174683252970378,
+              "xmax": 0.1876624800942161,
+              "ymax": 0.2632005924648709
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9811399579048157,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05638225728815252,
+              "ymin": 0.2125612915886773,
+              "xmax": 0.17834789102727716,
+              "ymax": 0.2670667669508192
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873571395874023,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32217552011663264,
+              "ymin": 0.21664731979370117,
+              "xmax": 0.3548124226656827,
+              "ymax": 0.34475691265530056
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9912808537483215,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.058045846765691585,
+              "ymin": 0.21174683252970378,
+              "xmax": 0.1876624800942161,
+              "ymax": 0.2632005924648709
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9811399579048157,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05638225728815252,
+              "ymin": 0.2125612915886773,
+              "xmax": 0.17834789102727716,
+              "ymax": 0.2670667669508192
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.893000000010943,
+          "detection_ms": 242.84919999999693,
+          "ocr_ms": 429.8099999999977,
+          "total_ms": 695.7813999999926,
+          "capture_ms": 11.399999999441206,
+          "cpu_percent": 11.22838293751469,
+          "memory_mb": 511.62890625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:25.706Z",
+        "captured_at": "2026-09-28T02:07:25.028Z",
+        "frame_number": 10,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100353,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.988081157207489,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228399623524057,
+              "ymin": 0.2188782925075955,
+              "xmax": 0.3562647125937722,
+              "ymax": 0.3428371344672309
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.785906970500946,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020060972733931107,
+              "ymin": 0.16468983968098957,
+              "xmax": 0.6018162467262962,
+              "ymax": 0.6727602132161459
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9961236715316772,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05740821144797585,
+              "ymin": 0.21157708909776476,
+              "xmax": 0.17811164855957032,
+              "ymax": 0.2628748067220052
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.988081157207489,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228399623524057,
+              "ymin": 0.2188782925075955,
+              "xmax": 0.3562647125937722,
+              "ymax": 0.3428371344672309
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.785906970500946,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020060972733931107,
+              "ymin": 0.16468983968098957,
+              "xmax": 0.6018162467262962,
+              "ymax": 0.6727602132161459
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9961236715316772,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05740821144797585,
+              "ymin": 0.21157708909776476,
+              "xmax": 0.17811164855957032,
+              "ymax": 0.2628748067220052
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.231299999999464,
+          "detection_ms": 230.4320000000007,
+          "ocr_ms": 421.87080000000424,
+          "total_ms": 674.7692000000097,
+          "capture_ms": 11.700000000186265,
+          "cpu_percent": 11.58729533001786,
+          "memory_mb": 501.546875
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:27.740Z",
+        "captured_at": "2026-09-28T02:07:27.035Z",
+        "frame_number": 11,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100350,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9882413744926453,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3218534903092818,
+              "ymin": 0.21771419525146485,
+              "xmax": 0.35554373481056906,
+              "ymax": 0.3432298999362522
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7805590033531189,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02038726806640625,
+              "ymin": 0.16763656616210937,
+              "xmax": 0.6020794261585583,
+              "ymax": 0.6749525621202257
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9970954060554504,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05831199125810103,
+              "ymin": 0.21136928346421985,
+              "xmax": 0.17986872412941673,
+              "ymax": 0.26519260618421764
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9882413744926453,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3218534903092818,
+              "ymin": 0.21771419525146485,
+              "xmax": 0.35554373481056906,
+              "ymax": 0.3432298999362522
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7805590033531189,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02038726806640625,
+              "ymin": 0.16763656616210937,
+              "xmax": 0.6020794261585583,
+              "ymax": 0.6749525621202257
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9970954060554504,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05831199125810103,
+              "ymin": 0.21136928346421985,
+              "xmax": 0.17986872412941673,
+              "ymax": 0.26519260618421764
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.19550000000163,
+          "detection_ms": 241.44890000000305,
+          "ocr_ms": 438.42759999999544,
+          "total_ms": 702.2859000000026,
+          "capture_ms": 11.299999999813735,
+          "cpu_percent": 11.809649033249805,
+          "memory_mb": 506.046875
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:29.716Z",
+        "captured_at": "2026-09-28T02:07:29.035Z",
+        "frame_number": 12,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100348,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873865842819214,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.322857666015625,
+              "ymin": 0.21966707653469508,
+              "xmax": 0.35783122669566764,
+              "ymax": 0.3444646644592285
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7653594017028809,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020353525335138494,
+              "ymin": 0.1672678968641493,
+              "xmax": 0.6020570581609552,
+              "ymax": 0.6750895521375868
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.996762216091156,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05780713341452859,
+              "ymin": 0.21232938978407118,
+              "xmax": 0.17754165476018732,
+              "ymax": 0.26484937879774306
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873865842819214,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.322857666015625,
+              "ymin": 0.21966707653469508,
+              "xmax": 0.35783122669566764,
+              "ymax": 0.3444646644592285
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7653594017028809,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020353525335138494,
+              "ymin": 0.1672678968641493,
+              "xmax": 0.6020570581609552,
+              "ymax": 0.6750895521375868
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.996762216091156,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05780713341452859,
+              "ymin": 0.21232938978407118,
+              "xmax": 0.17754165476018732,
+              "ymax": 0.26484937879774306
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.219899999996414,
+          "detection_ms": 223.84299999999348,
+          "ocr_ms": 432.1359999999986,
+          "total_ms": 677.4007999999885,
+          "capture_ms": 11.200000000186265,
+          "cpu_percent": 10.813391422035705,
+          "memory_mb": 505.23828125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:31.731Z",
+        "captured_at": "2026-09-28T02:07:31.048Z",
+        "frame_number": 13,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100350,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.987199604511261,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228960557417435,
+              "ymin": 0.2200196287367079,
+              "xmax": 0.35512551394375885,
+              "ymax": 0.34329381730821396
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8263261318206787,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020092287930575284,
+              "ymin": 0.16715311686197917,
+              "xmax": 0.6018201654607599,
+              "ymax": 0.674287363688151
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9950978755950928,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05828549645163796,
+              "ymin": 0.21098136054144964,
+              "xmax": 0.1843662522055886,
+              "ymax": 0.2628592088487413
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9425784349441528,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05710131038318981,
+              "ymin": 0.21289128409491645,
+              "xmax": 0.17960883920842952,
+              "ymax": 0.2661146397060818
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.987199604511261,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228960557417435,
+              "ymin": 0.2200196287367079,
+              "xmax": 0.35512551394375885,
+              "ymax": 0.34329381730821396
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8263261318206787,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020092287930575284,
+              "ymin": 0.16715311686197917,
+              "xmax": 0.6018201654607599,
+              "ymax": 0.674287363688151
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9950978755950928,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05828549645163796,
+              "ymin": 0.21098136054144964,
+              "xmax": 0.1843662522055886,
+              "ymax": 0.2628592088487413
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9425784349441528,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05710131038318981,
+              "ymin": 0.21289128409491645,
+              "xmax": 0.17960883920842952,
+              "ymax": 0.2661146397060818
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.966300000000047,
+          "detection_ms": 232.95120000001043,
+          "ocr_ms": 422.33619999999064,
+          "total_ms": 677.4833000000071,
+          "capture_ms": 8.699999999254942,
+          "cpu_percent": 10.378484606188708,
+          "memory_mb": 484.7734375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:33.741Z",
+        "captured_at": "2026-09-28T02:07:33.060Z",
+        "frame_number": 14,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100332,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9663726687431335,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3220593105662953,
+              "ymin": 0.21732149336073134,
+              "xmax": 0.3559466708790172,
+              "ymax": 0.3430798975626628
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7773033380508423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020368229259144176,
+              "ymin": 0.16831969367133245,
+              "xmax": 0.6019947745583274,
+              "ymax": 0.6744663577609592
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9966846108436584,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05794459256258878,
+              "ymin": 0.21139004177517362,
+              "xmax": 0.17951417402787642,
+              "ymax": 0.26397301567925346
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9663726687431335,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3220593105662953,
+              "ymin": 0.21732149336073134,
+              "xmax": 0.3559466708790172,
+              "ymax": 0.3430798975626628
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7773033380508423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020368229259144176,
+              "ymin": 0.16831969367133245,
+              "xmax": 0.6019947745583274,
+              "ymax": 0.6744663577609592
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9966846108436584,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05794459256258878,
+              "ymin": 0.21139004177517362,
+              "xmax": 0.17951417402787642,
+              "ymax": 0.26397301567925346
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.78179999999702,
+          "detection_ms": 234.96850000000268,
+          "ocr_ms": 419.24099999999453,
+          "total_ms": 677.1977999999945,
+          "capture_ms": 11.399999999441206,
+          "cpu_percent": 11.822616671229683,
+          "memory_mb": 477.0703125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:35.747Z",
+        "captured_at": "2026-09-28T02:07:35.067Z",
+        "frame_number": 15,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100314,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9722614884376526,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32232431931929156,
+              "ymin": 0.21914300070868598,
+              "xmax": 0.3551381024447354,
+              "ymax": 0.341589166853163
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7585347294807434,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020233154296875,
+              "ymin": 0.1676219431559245,
+              "xmax": 0.6019681063565341,
+              "ymax": 0.6753365325927735
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7722527384757996,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02025635459206321,
+              "ymin": 0.12081609514024523,
+              "xmax": 0.601668999411843,
+              "ymax": 0.6661132515801323
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9967547059059143,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05904820182106712,
+              "ymin": 0.21169189029269747,
+              "xmax": 0.17931378104469992,
+              "ymax": 0.26402652740478516
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9722614884376526,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32232431931929156,
+              "ymin": 0.21914300070868598,
+              "xmax": 0.3551381024447354,
+              "ymax": 0.341589166853163
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7585347294807434,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020233154296875,
+              "ymin": 0.1676219431559245,
+              "xmax": 0.6019681063565341,
+              "ymax": 0.6753365325927735
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7722527384757996,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02025635459206321,
+              "ymin": 0.12081609514024523,
+              "xmax": 0.601668999411843,
+              "ymax": 0.6661132515801323
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9967547059059143,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05904820182106712,
+              "ymin": 0.21169189029269747,
+              "xmax": 0.17931378104469992,
+              "ymax": 0.26402652740478516
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.495999999999185,
+          "detection_ms": 234.43519999999262,
+          "ocr_ms": 420.14620000000286,
+          "total_ms": 677.2877000000008,
+          "capture_ms": 11.5,
+          "cpu_percent": 10.953616904603452,
+          "memory_mb": 530.95703125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:37.751Z",
+        "captured_at": "2026-09-28T02:07:37.071Z",
+        "frame_number": 16,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100308,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.969761312007904,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3236779733137651,
+              "ymin": 0.21922957314385308,
+              "xmax": 0.355543717471036,
+              "ymax": 0.34243397394816083
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8346178531646729,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02021727128462358,
+              "ymin": 0.16468475341796876,
+              "xmax": 0.601900204745206,
+              "ymax": 0.6737190585666233
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7646765112876892,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02024177204478871,
+              "ymin": 0.12069722493489583,
+              "xmax": 0.6016973842274059,
+              "ymax": 0.668287353515625
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9956149458885193,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05801325711337003,
+              "ymin": 0.21061502244737412,
+              "xmax": 0.17920202775435015,
+              "ymax": 0.26343484666612416
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.969761312007904,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3236779733137651,
+              "ymin": 0.21922957314385308,
+              "xmax": 0.355543717471036,
+              "ymax": 0.34243397394816083
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8346178531646729,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02021727128462358,
+              "ymin": 0.16468475341796876,
+              "xmax": 0.601900204745206,
+              "ymax": 0.6737190585666233
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7646765112876892,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02024177204478871,
+              "ymin": 0.12069722493489583,
+              "xmax": 0.6016973842274059,
+              "ymax": 0.668287353515625
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9956149458885193,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05801325711337003,
+              "ymin": 0.21061502244737412,
+              "xmax": 0.17920202775435015,
+              "ymax": 0.26343484666612416
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.138200000001234,
+          "detection_ms": 236.58899999999267,
+          "ocr_ms": 418.3061000000016,
+          "total_ms": 676.2419999999984,
+          "capture_ms": 9.300000000745058,
+          "cpu_percent": 11.83932674989134,
+          "memory_mb": 518.03125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:39.781Z",
+        "captured_at": "2026-09-28T02:07:39.081Z",
+        "frame_number": 17,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100320,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9797903299331665,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3215804186734286,
+              "ymin": 0.21944144778781466,
+              "xmax": 0.35514930378306997,
+              "ymax": 0.3465271970960829
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9973742365837097,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05897685831243342,
+              "ymin": 0.21245209587944877,
+              "xmax": 0.18624890934337268,
+              "ymax": 0.2652556440565321
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9797903299331665,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3215804186734286,
+              "ymin": 0.21944144778781466,
+              "xmax": 0.35514930378306997,
+              "ymax": 0.3465271970960829
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9973742365837097,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05897685831243342,
+              "ymin": 0.21245209587944877,
+              "xmax": 0.18624890934337268,
+              "ymax": 0.2652556440565321
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.507199999992736,
+          "detection_ms": 249.22999999999593,
+          "ocr_ms": 425.6429000000062,
+          "total_ms": 697.6037999999971,
+          "capture_ms": 11.700000000186265,
+          "cpu_percent": 12.883387389804982,
+          "memory_mb": 514.390625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:41.769Z",
+        "captured_at": "2026-09-28T02:07:41.094Z",
+        "frame_number": 18,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100297,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9829878211021423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32186321778730914,
+              "ymin": 0.2160234154595269,
+              "xmax": 0.3550823471762917,
+              "ymax": 0.3433308410644531
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7948936223983765,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020399683172052558,
+              "ymin": 0.16374983469645182,
+              "xmax": 0.6021305431019176,
+              "ymax": 0.6754232745700413
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9944031238555908,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.0584808349609375,
+              "ymin": 0.21026493920220268,
+              "xmax": 0.18762581565163353,
+              "ymax": 0.26251573774549697
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9931296110153198,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.057422152432528406,
+              "ymin": 0.21188407686021593,
+              "xmax": 0.17828598022460937,
+              "ymax": 0.2643110932244195
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9829878211021423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32186321778730914,
+              "ymin": 0.2160234154595269,
+              "xmax": 0.3550823471762917,
+              "ymax": 0.3433308410644531
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7948936223983765,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020399683172052558,
+              "ymin": 0.16374983469645182,
+              "xmax": 0.6021305431019176,
+              "ymax": 0.6754232745700413
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9944031238555908,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.0584808349609375,
+              "ymin": 0.21026493920220268,
+              "xmax": 0.18762581565163353,
+              "ymax": 0.26251573774549697
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9931296110153198,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.057422152432528406,
+              "ymin": 0.21188407686021593,
+              "xmax": 0.17828598022460937,
+              "ymax": 0.2643110932244195
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 25.047200000000885,
+          "detection_ms": 230.4600999999966,
+          "ocr_ms": 416.77739999999176,
+          "total_ms": 672.5146000000095,
+          "capture_ms": 12.200000000186265,
+          "cpu_percent": 11.914239482681694,
+          "memory_mb": 527.34765625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:43.778Z",
+        "captured_at": "2026-09-28T02:07:43.098Z",
+        "frame_number": 19,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100331,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873571395874023,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32217552011663264,
+              "ymin": 0.21664731979370117,
+              "xmax": 0.3548124226656827,
+              "ymax": 0.34475691265530056
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9912808537483215,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.058045846765691585,
+              "ymin": 0.21174683252970378,
+              "xmax": 0.1876624800942161,
+              "ymax": 0.2632005924648709
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9811399579048157,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05638225728815252,
+              "ymin": 0.2125612915886773,
+              "xmax": 0.17834789102727716,
+              "ymax": 0.2670667669508192
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873571395874023,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32217552011663264,
+              "ymin": 0.21664731979370117,
+              "xmax": 0.3548124226656827,
+              "ymax": 0.34475691265530056
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9912808537483215,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.058045846765691585,
+              "ymin": 0.21174683252970378,
+              "xmax": 0.1876624800942161,
+              "ymax": 0.2632005924648709
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9811399579048157,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05638225728815252,
+              "ymin": 0.2125612915886773,
+              "xmax": 0.17834789102727716,
+              "ymax": 0.2670667669508192
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.35559999999532,
+          "detection_ms": 239.79640000000654,
+          "ocr_ms": 415.54989999999816,
+          "total_ms": 676.8990000000049,
+          "capture_ms": 9.399999999441206,
+          "cpu_percent": 11.107639396719371,
+          "memory_mb": 524.19140625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:45.816Z",
+        "captured_at": "2026-09-28T02:07:45.118Z",
+        "frame_number": 20,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100353,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.988081157207489,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228399623524057,
+              "ymin": 0.2188782925075955,
+              "xmax": 0.3562647125937722,
+              "ymax": 0.3428371344672309
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.785906970500946,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020060972733931107,
+              "ymin": 0.16468983968098957,
+              "xmax": 0.6018162467262962,
+              "ymax": 0.6727602132161459
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9961236715316772,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05740821144797585,
+              "ymin": 0.21157708909776476,
+              "xmax": 0.17811164855957032,
+              "ymax": 0.2628748067220052
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.988081157207489,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228399623524057,
+              "ymin": 0.2188782925075955,
+              "xmax": 0.3562647125937722,
+              "ymax": 0.3428371344672309
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.785906970500946,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020060972733931107,
+              "ymin": 0.16468983968098957,
+              "xmax": 0.6018162467262962,
+              "ymax": 0.6727602132161459
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9961236715316772,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05740821144797585,
+              "ymin": 0.21157708909776476,
+              "xmax": 0.17811164855957032,
+              "ymax": 0.2628748067220052
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 20.94789999999921,
+          "detection_ms": 244.67170000000624,
+          "ocr_ms": 428.8307999999961,
+          "total_ms": 694.678899999999,
+          "capture_ms": 11.099999999627471,
+          "cpu_percent": 11.669060338524766,
+          "memory_mb": 499.43359375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:47.801Z",
+        "captured_at": "2026-09-28T02:07:47.131Z",
+        "frame_number": 21,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100350,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9882413744926453,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3218534903092818,
+              "ymin": 0.21771419525146485,
+              "xmax": 0.35554373481056906,
+              "ymax": 0.3432298999362522
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7805590033531189,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02038726806640625,
+              "ymin": 0.16763656616210937,
+              "xmax": 0.6020794261585583,
+              "ymax": 0.6749525621202257
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9970954060554504,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05831199125810103,
+              "ymin": 0.21136928346421985,
+              "xmax": 0.17986872412941673,
+              "ymax": 0.26519260618421764
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9882413744926453,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3218534903092818,
+              "ymin": 0.21771419525146485,
+              "xmax": 0.35554373481056906,
+              "ymax": 0.3432298999362522
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7805590033531189,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02038726806640625,
+              "ymin": 0.16763656616210937,
+              "xmax": 0.6020794261585583,
+              "ymax": 0.6749525621202257
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9970954060554504,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05831199125810103,
+              "ymin": 0.21136928346421985,
+              "xmax": 0.17986872412941673,
+              "ymax": 0.26519260618421764
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 20.848199999993085,
+          "detection_ms": 226.84000000001106,
+          "ocr_ms": 419.10629999999946,
+          "total_ms": 666.9980999999971,
+          "capture_ms": 11.600000000558794,
+          "cpu_percent": 13.624476591462614,
+          "memory_mb": 522.6953125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:49.814Z",
+        "captured_at": "2026-09-28T02:07:49.144Z",
+        "frame_number": 22,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100348,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873865842819214,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.322857666015625,
+              "ymin": 0.21966707653469508,
+              "xmax": 0.35783122669566764,
+              "ymax": 0.3444646644592285
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7653594017028809,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020353525335138494,
+              "ymin": 0.1672678968641493,
+              "xmax": 0.6020570581609552,
+              "ymax": 0.6750895521375868
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.996762216091156,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05780713341452859,
+              "ymin": 0.21232938978407118,
+              "xmax": 0.17754165476018732,
+              "ymax": 0.26484937879774306
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873865842819214,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.322857666015625,
+              "ymin": 0.21966707653469508,
+              "xmax": 0.35783122669566764,
+              "ymax": 0.3444646644592285
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7653594017028809,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020353525335138494,
+              "ymin": 0.1672678968641493,
+              "xmax": 0.6020570581609552,
+              "ymax": 0.6750895521375868
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.996762216091156,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05780713341452859,
+              "ymin": 0.21232938978407118,
+              "xmax": 0.17754165476018732,
+              "ymax": 0.26484937879774306
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.108299999992596,
+          "detection_ms": 221.98769999999786,
+          "ocr_ms": 422.58020000001125,
+          "total_ms": 666.8923000000068,
+          "capture_ms": 11.600000000558794,
+          "cpu_percent": 12.586365144716643,
+          "memory_mb": 523.98046875
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:51.836Z",
+        "captured_at": "2026-09-28T02:07:51.156Z",
+        "frame_number": 23,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100350,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.987199604511261,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228960557417435,
+              "ymin": 0.2200196287367079,
+              "xmax": 0.35512551394375885,
+              "ymax": 0.34329381730821396
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8263261318206787,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020092287930575284,
+              "ymin": 0.16715311686197917,
+              "xmax": 0.6018201654607599,
+              "ymax": 0.674287363688151
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9950978755950928,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05828549645163796,
+              "ymin": 0.21098136054144964,
+              "xmax": 0.1843662522055886,
+              "ymax": 0.2628592088487413
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9425784349441528,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05710131038318981,
+              "ymin": 0.21289128409491645,
+              "xmax": 0.17960883920842952,
+              "ymax": 0.2661146397060818
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.987199604511261,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228960557417435,
+              "ymin": 0.2200196287367079,
+              "xmax": 0.35512551394375885,
+              "ymax": 0.34329381730821396
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8263261318206787,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020092287930575284,
+              "ymin": 0.16715311686197917,
+              "xmax": 0.6018201654607599,
+              "ymax": 0.674287363688151
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9950978755950928,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05828549645163796,
+              "ymin": 0.21098136054144964,
+              "xmax": 0.1843662522055886,
+              "ymax": 0.2628592088487413
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9425784349441528,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05710131038318981,
+              "ymin": 0.21289128409491645,
+              "xmax": 0.17960883920842952,
+              "ymax": 0.2661146397060818
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 20.494200000001,
+          "detection_ms": 241.4615000000049,
+          "ocr_ms": 415.185799999992,
+          "total_ms": 677.3390999999974,
+          "capture_ms": 10.899999999441206,
+          "cpu_percent": 12.253832681444244,
+          "memory_mb": 509.0859375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:53.841Z",
+        "captured_at": "2026-09-28T02:07:53.163Z",
+        "frame_number": 24,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100332,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9663726687431335,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3220593105662953,
+              "ymin": 0.21732149336073134,
+              "xmax": 0.3559466708790172,
+              "ymax": 0.3430798975626628
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7773033380508423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020368229259144176,
+              "ymin": 0.16831969367133245,
+              "xmax": 0.6019947745583274,
+              "ymax": 0.6744663577609592
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9966846108436584,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05794459256258878,
+              "ymin": 0.21139004177517362,
+              "xmax": 0.17951417402787642,
+              "ymax": 0.26397301567925346
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9663726687431335,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3220593105662953,
+              "ymin": 0.21732149336073134,
+              "xmax": 0.3559466708790172,
+              "ymax": 0.3430798975626628
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7773033380508423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020368229259144176,
+              "ymin": 0.16831969367133245,
+              "xmax": 0.6019947745583274,
+              "ymax": 0.6744663577609592
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9966846108436584,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05794459256258878,
+              "ymin": 0.21139004177517362,
+              "xmax": 0.17951417402787642,
+              "ymax": 0.26397301567925346
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.9091000000044,
+          "detection_ms": 234.41890000000421,
+          "ocr_ms": 418.77730000000156,
+          "total_ms": 675.3111999999965,
+          "capture_ms": 11.200000000186265,
+          "cpu_percent": 10.856106044146815,
+          "memory_mb": 541.5234375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:55.855Z",
+        "captured_at": "2026-09-28T02:07:55.176Z",
+        "frame_number": 25,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100314,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9722614884376526,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32232431931929156,
+              "ymin": 0.21914300070868598,
+              "xmax": 0.3551381024447354,
+              "ymax": 0.341589166853163
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7585347294807434,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020233154296875,
+              "ymin": 0.1676219431559245,
+              "xmax": 0.6019681063565341,
+              "ymax": 0.6753365325927735
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7722527384757996,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02025635459206321,
+              "ymin": 0.12081609514024523,
+              "xmax": 0.601668999411843,
+              "ymax": 0.6661132515801323
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9967547059059143,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05904820182106712,
+              "ymin": 0.21169189029269747,
+              "xmax": 0.17931378104469992,
+              "ymax": 0.26402652740478516
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9722614884376526,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32232431931929156,
+              "ymin": 0.21914300070868598,
+              "xmax": 0.3551381024447354,
+              "ymax": 0.341589166853163
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7585347294807434,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020233154296875,
+              "ymin": 0.1676219431559245,
+              "xmax": 0.6019681063565341,
+              "ymax": 0.6753365325927735
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7722527384757996,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02025635459206321,
+              "ymin": 0.12081609514024523,
+              "xmax": 0.601668999411843,
+              "ymax": 0.6661132515801323
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9967547059059143,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05904820182106712,
+              "ymin": 0.21169189029269747,
+              "xmax": 0.17931378104469992,
+              "ymax": 0.26402652740478516
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.64639999999781,
+          "detection_ms": 226.55319999999483,
+          "ocr_ms": 427.9878000000026,
+          "total_ms": 676.3822999999975,
+          "capture_ms": 11.900000000372529,
+          "cpu_percent": 13.139758388118722,
+          "memory_mb": 522.10546875
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:57.882Z",
+        "captured_at": "2026-09-28T02:07:57.182Z",
+        "frame_number": 26,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100308,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.969761312007904,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3236779733137651,
+              "ymin": 0.21922957314385308,
+              "xmax": 0.355543717471036,
+              "ymax": 0.34243397394816083
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8346178531646729,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02021727128462358,
+              "ymin": 0.16468475341796876,
+              "xmax": 0.601900204745206,
+              "ymax": 0.6737190585666233
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7646765112876892,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02024177204478871,
+              "ymin": 0.12069722493489583,
+              "xmax": 0.6016973842274059,
+              "ymax": 0.668287353515625
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9956149458885193,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05801325711337003,
+              "ymin": 0.21061502244737412,
+              "xmax": 0.17920202775435015,
+              "ymax": 0.26343484666612416
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.969761312007904,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3236779733137651,
+              "ymin": 0.21922957314385308,
+              "xmax": 0.355543717471036,
+              "ymax": 0.34243397394816083
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.8346178531646729,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02021727128462358,
+              "ymin": 0.16468475341796876,
+              "xmax": 0.601900204745206,
+              "ymax": 0.6737190585666233
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7646765112876892,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.02024177204478871,
+              "ymin": 0.12069722493489583,
+              "xmax": 0.6016973842274059,
+              "ymax": 0.668287353515625
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9956149458885193,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05801325711337003,
+              "ymin": 0.21061502244737412,
+              "xmax": 0.17920202775435015,
+              "ymax": 0.26343484666612416
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.54910000000382,
+          "detection_ms": 238.35689999999886,
+          "ocr_ms": 436.8734000000113,
+          "total_ms": 696.9740999999922,
+          "capture_ms": 11.200000000186265,
+          "cpu_percent": 12.043130440571744,
+          "memory_mb": 521.3828125
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:07:59.863Z",
+        "captured_at": "2026-09-28T02:07:59.193Z",
+        "frame_number": 27,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100320,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9797903299331665,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3215804186734286,
+              "ymin": 0.21944144778781466,
+              "xmax": 0.35514930378306997,
+              "ymax": 0.3465271970960829
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9973742365837097,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05897685831243342,
+              "ymin": 0.21245209587944877,
+              "xmax": 0.18624890934337268,
+              "ymax": 0.2652556440565321
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9797903299331665,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.3215804186734286,
+              "ymin": 0.21944144778781466,
+              "xmax": 0.35514930378306997,
+              "ymax": 0.3465271970960829
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9973742365837097,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05897685831243342,
+              "ymin": 0.21245209587944877,
+              "xmax": 0.18624890934337268,
+              "ymax": 0.2652556440565321
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.575800000005984,
+          "detection_ms": 219.36010000000533,
+          "ocr_ms": 426.7335000000021,
+          "total_ms": 667.8683000000019,
+          "capture_ms": 9.099999999627471,
+          "cpu_percent": 10.677629107415308,
+          "memory_mb": 522.7734375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:08:02.008Z",
+        "captured_at": "2026-09-28T02:08:01.305Z",
+        "frame_number": 28,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100297,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9829878211021423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32186321778730914,
+              "ymin": 0.2160234154595269,
+              "xmax": 0.3550823471762917,
+              "ymax": 0.3433308410644531
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7948936223983765,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020399683172052558,
+              "ymin": 0.16374983469645182,
+              "xmax": 0.6021305431019176,
+              "ymax": 0.6754232745700413
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9944031238555908,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.0584808349609375,
+              "ymin": 0.21026493920220268,
+              "xmax": 0.18762581565163353,
+              "ymax": 0.26251573774549697
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9931296110153198,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.057422152432528406,
+              "ymin": 0.21188407686021593,
+              "xmax": 0.17828598022460937,
+              "ymax": 0.2643110932244195
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9829878211021423,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32186321778730914,
+              "ymin": 0.2160234154595269,
+              "xmax": 0.3550823471762917,
+              "ymax": 0.3433308410644531
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.7948936223983765,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020399683172052558,
+              "ymin": 0.16374983469645182,
+              "xmax": 0.6021305431019176,
+              "ymax": 0.6754232745700413
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9944031238555908,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.0584808349609375,
+              "ymin": 0.21026493920220268,
+              "xmax": 0.18762581565163353,
+              "ymax": 0.26251573774549697
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9931296110153198,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.057422152432528406,
+              "ymin": 0.21188407686021593,
+              "xmax": 0.17828598022460937,
+              "ymax": 0.2643110932244195
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.670100000003004,
+          "detection_ms": 247.44569999999658,
+          "ocr_ms": 430.3735000000015,
+          "total_ms": 700.7160000000003,
+          "capture_ms": 11.399999999441206,
+          "cpu_percent": 10.87280724287728,
+          "memory_mb": 525.0234375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:08:03.989Z",
+        "captured_at": "2026-09-28T02:08:03.311Z",
+        "frame_number": 29,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100331,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873571395874023,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32217552011663264,
+              "ymin": 0.21664731979370117,
+              "xmax": 0.3548124226656827,
+              "ymax": 0.34475691265530056
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9912808537483215,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.058045846765691585,
+              "ymin": 0.21174683252970378,
+              "xmax": 0.1876624800942161,
+              "ymax": 0.2632005924648709
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9811399579048157,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05638225728815252,
+              "ymin": 0.2125612915886773,
+              "xmax": 0.17834789102727716,
+              "ymax": 0.2670667669508192
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9873571395874023,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32217552011663264,
+              "ymin": 0.21664731979370117,
+              "xmax": 0.3548124226656827,
+              "ymax": 0.34475691265530056
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9912808537483215,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.058045846765691585,
+              "ymin": 0.21174683252970378,
+              "xmax": 0.1876624800942161,
+              "ymax": 0.2632005924648709
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9811399579048157,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05638225728815252,
+              "ymin": 0.2125612915886773,
+              "xmax": 0.17834789102727716,
+              "ymax": 0.2670667669508192
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 22.58430000000226,
+          "detection_ms": 233.41539999999804,
+          "ocr_ms": 419.31080000000657,
+          "total_ms": 675.5139000000054,
+          "capture_ms": 11.400000000372529,
+          "cpu_percent": 13.008614626582709,
+          "memory_mb": 537.28515625
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "리모컨",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      },
+      {
+        "timestamp": "2026-09-28T02:08:06.016Z",
+        "captured_at": "2026-09-28T02:08:05.318Z",
+        "frame_number": 30,
+        "domain": "127.0.0.1",
+        "source": "chrome_periodic",
+        "capture": true,
+        "capture_reason": [
+          "periodic_visible_screen",
+          "privacy_heuristics_passed"
+        ],
+        "image_bytes": 100353,
+        "cache_hit": false,
+        "objects": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.988081157207489,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228399623524057,
+              "ymin": 0.2188782925075955,
+              "xmax": 0.3562647125937722,
+              "ymax": 0.3428371344672309
+            }
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.785906970500946,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020060972733931107,
+              "ymin": 0.16468983968098957,
+              "xmax": 0.6018162467262962,
+              "ymax": 0.6727602132161459
+            }
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9961236715316772,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05740821144797585,
+              "ymin": 0.21157708909776476,
+              "xmax": 0.17811164855957032,
+              "ymax": 0.2628748067220052
+            }
+          }
+        ],
+        "input": {
+          "width": 1100,
+          "height": 900,
+          "region": {
+            "left": 20,
+            "top": 116,
+            "width": 640,
+            "height": 481
+          },
+          "model_input": [
+            640,
+            640
+          ],
+          "threshold": 0.75,
+          "detection_scope": "visible_media_region"
+        },
+        "masked_regions": 2,
+        "object_evidence": [
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.988081157207489,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.32228399623524057,
+              "ymin": 0.2188782925075955,
+              "xmax": 0.3562647125937722,
+              "ymax": 0.3428371344672309
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "bed",
+            "label": "침대",
+            "confidence": 0.785906970500946,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.020060972733931107,
+              "ymin": 0.16468983968098957,
+              "xmax": 0.6018162467262962,
+              "ymax": 0.6727602132161459
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          },
+          {
+            "key": "remote",
+            "label": "리모컨",
+            "confidence": 0.9961236715316772,
+            "source": "local_object_model",
+            "box": {
+              "xmin": 0.05740821144797585,
+              "ymin": 0.21157708909776476,
+              "xmax": 0.17811164855957032,
+              "ymax": 0.2628748067220052
+            },
+            "meaning": "사물 종류 후보 · 브랜드/상품 모델명 미확인"
+          }
+        ],
+        "product_terms": [
+          "Galaxy Buds3 Pro"
+        ],
+        "term_evidence": [
+          {
+            "key": "term:galaxy buds3 pro",
+            "label": "Galaxy Buds3 Pro",
+            "confidence": 0.41,
+            "source": "ocr_dictionary",
+            "meaning": "화면 글자의 상품명 언급 · 이미지 속 사물과 동일 상품인지 미확인"
+          }
+        ],
+        "ocr_confidence": 0.41,
+        "ignored_objects": 2,
+        "ocr_error": null,
+        "timings": {
+          "preprocess_ms": 21.849099999992177,
+          "detection_ms": 250.75599999999395,
+          "ocr_ms": 422.3978999999963,
+          "total_ms": 695.1781999999948,
+          "capture_ms": 11.400000000372529,
+          "cpu_percent": 10.267151645434296,
+          "memory_mb": 535.2734375
+        },
+        "stored": [
+          "사물 분류·confidence",
+          "사전에 일치한 상품명",
+          "관측 수·시각·도메인",
+          "처리시간·자원 수치"
+        ],
+        "search_queries": [
+          "리모컨",
+          "침대",
+          "리모컨",
+          "Galaxy Buds3 Pro"
+        ]
+      }
+    ],
+    "interests": [
+      {
+        "key": "remote",
+        "label": "리모컨",
+        "confidence": 0.9961236715316772,
+        "source": "local_object_model",
+        "box": {
+          "xmin": 0.05740821144797585,
+          "ymin": 0.21157708909776476,
+          "xmax": 0.17811164855957032,
+          "ymax": 0.2628748067220052
+        },
+        "observations": 30,
+        "independent_frames": 30,
+        "status": "repeated",
+        "first_seen": "2026-09-28T02:07:07.661Z",
+        "last_seen": "2026-09-28T02:08:06.015Z",
+        "domains": [
+          "127.0.0.1"
+        ]
+      },
+      {
+        "key": "term:galaxy buds3 pro",
+        "label": "Galaxy Buds3 Pro",
+        "confidence": 0.41,
+        "source": "ocr_dictionary",
+        "observations": 30,
+        "independent_frames": 30,
+        "status": "repeated",
+        "first_seen": "2026-09-28T02:07:07.661Z",
+        "last_seen": "2026-09-28T02:08:06.015Z",
+        "domains": [
+          "127.0.0.1"
+        ]
+      },
+      {
+        "key": "bed",
+        "label": "침대",
+        "confidence": 0.785906970500946,
+        "source": "local_object_model",
+        "box": {
+          "xmin": 0.020060972733931107,
+          "ymin": 0.16468983968098957,
+          "xmax": 0.6018162467262962,
+          "ymax": 0.6727602132161459
+        },
+        "observations": 24,
+        "independent_frames": 24,
+        "status": "repeated",
+        "first_seen": "2026-09-28T02:07:07.661Z",
+        "last_seen": "2026-09-28T02:08:06.015Z",
+        "domains": [
+          "127.0.0.1"
+        ]
+      }
+    ]
+  },
+  "pass": true
+}

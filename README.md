@@ -2,33 +2,49 @@
 
 PC Chrome 확장 + TypeScript 로컬 서버. 실제 데이터 흐름을 검증하기 위한 PoC입니다. 결과와 제한은 [TECH_VALIDATION_REPORT.md](TECH_VALIDATION_REPORT.md), [BENCHMARK_RESULTS.json](BENCHMARK_RESULTS.json), [TEST_RESULTS.json](TEST_RESULTS.json), [SECURITY_REVIEW.md](SECURITY_REVIEW.md)에 기록합니다.
 
-## 주기적 화면 분석 사용하기 (v0.2)
+## 주기적 화면 분석 사용하기 (v0.3)
 
-쇼핑 페이지뿐 아니라 일반 웹·인스타그램·유튜브 화면에서 사물을 찾는 모드입니다. 페이지 이동 없이 **기본 10초마다** 현재 사용 중인 Chrome 탭을 캡처합니다. 분석 중에는 다음 캡처를 하지 않습니다. 같은 사물 종류가 여러 번 나타나면 관측 수를 집계합니다.
+쇼핑 페이지뿐 아니라 일반 웹·인스타그램·유튜브 화면에서 사물을 찾는 모드입니다. 페이지 이동 없이 **기본 목표 2초, 최소 1초 간격**으로 현재 사용 중인 Chrome 탭을 캡처합니다. 분석이 주기보다 오래 걸리면 완료 후 다음 프레임을 처리하고 밀린 캡처는 쌓지 않습니다. 같은 사물 종류가 여러 번 나타나면 관측 수를 집계합니다.
 
 1. 이 폴더의 **`START_POC.cmd`를 더블클릭**합니다. 프로그램 창을 열어 두세요. 처음 설정하거나 코드를 갱신한 경우 먼저 `run.cmd build`를 실행하세요.
-2. Chrome 주소창에 `chrome://extensions` 입력 → **개발자 모드** → **압축해제된 확장 프로그램을 로드합니다** → 이 폴더의 **`dist/extension`** 선택. 이미 설치했다면 새로고침 버튼을 누릅니다.
+2. Chrome 주소창에 `chrome://extensions` 입력 → **개발자 모드** → **압축해제된 확장 프로그램을 로드합니다** → 이 폴더의 **`dist/extension`** 선택. 이미 설치했다면 확장 새로고침 버튼을 누르고, 분석할 웹페이지도 새로고침해 새 코드를 적용합니다.
 3. `artifacts/server-token.txt`를 메모장으로 열어 토큰을 복사합니다. Chrome 확장 버튼 → 토큰 입력 → **주기적 화면 분석 동의** 체크 → **주기 분석 연결 / 시작**. Chrome 사이트 접근 권한을 허용합니다. 최초 1회 필요합니다.
 4. 이후에는 `START_POC.cmd` 실행 시 이전 동의로 분석을 자동 재개합니다. 프로그램이 꺼져 있으면 캡처하지 않습니다. 동의를 철회했다면 다시 연결해야 합니다.
-5. **[직접 테스트 / DEBUG](http://127.0.0.1:8787/live)** 를 열고 같은 토큰으로 연결합니다. 5/10/30/60초 간격 변경, 일시정지, 재개, 관심 데이터 삭제가 가능합니다.
+5. **[직접 테스트 / DEBUG](http://127.0.0.1:8787/live)** 를 열고 같은 토큰으로 연결합니다. 1/2/5/10/30/60초 간격 변경, 일시정지, 재개, 관심 데이터 삭제가 가능합니다.
 6. 이 화면의 **사물 이미지 테스트 화면 열기**를 누르고 그 탭을 20~30초 동안 보고 있으세요. 오른쪽 위젯에서 리모컨 관측 수가 늘어나면 주기적 실제 화면 캡처가 동작한 것입니다. **공개 샘플 이미지 1회 분석** 버튼은 확장 프로그램 없이 로컬 분석 엔진만 검증합니다.
 7. 분석 중지는 DEBUG의 일시정지 또는 위젯의 자동 분석 중지를 사용합니다. 영구 동의 철회는 확장 팝업의 **자동 분석 동의 철회**입니다. 프로그램 창에서 `Ctrl+C`를 눌러 종료할 수도 있습니다.
+8. **이번 화면에서 추출한 데이터**에서 위치 도식·사물 종류·OCR 상품명 언급·엔진 점수를 확인합니다. **최근 30회 분석 이력**에서 새 추론과 캐시 재사용을 구분합니다. **현재 결과 JSON 저장**을 누르면 종료 후에도 결과를 확인할 수 있습니다. 원본 이미지와 토큰은 내보내지 않습니다.
 
 **수집 범위:** 활성·포커스된 HTTP(S) 탭만 대상으로 합니다. 로그인·결제·메일·DM·설정·민감 URL/제목, 비밀번호/카드 입력이 보이는 페이지, 입력 중인 화면은 제외합니다. 입력 요소·댓글·아바타·이메일/전화번호 패턴을 캡처 전에 가립니다. 이 규칙이 모든 개인정보를 판별하는 것은 아니므로 비공개 화면에서는 중지하세요. 시크릿 모드는 지원하지 않습니다.
 
 **저장 범위:** 원본 이미지는 디스크에 저장하지 않습니다. 감지 종류·허용된 OCR 상품명·관측 수·도메인·성능만 RAM에 남깁니다(30분 TTL, 최대 관심 100개). 전체 URL·페이지 제목·DOM·OCR 전문은 새 주기 분석 경로에서 저장하지 않습니다. 연결 동의/토큰은 Chrome 로컬 저장소와 gitignore된 토큰 파일에 남겨 재실행을 지원합니다.
 
-**현재 한계:** 로컬 YOLOS-tiny q8로 제한된 사물 종류를 인식하며, 정확한 상품 SKU/브랜드를 이미지에서 일반적으로 알아내지는 못합니다. OCR은 영어 모델과 소수 상품명 사전입니다. 관심 사물별 외부 상품 검색 링크를 제공하고, 아래 기존 상품 페이지 모드에서 판매처 자동 비교를 제공합니다. 주기 분석의 모든 사물에 대한 자동 판매처 가격 비교는 아직 연결하지 않았습니다. 로그인한 Instagram/YouTube 실계정은 자동 테스트하지 않았습니다. 초기 인식 시 약 1GB RAM이 관측되었습니다.
+**현재 한계:** 로컬 YOLOS-tiny q8로 제한된 사물 종류를 인식하며, 정확한 상품 SKU/브랜드를 이미지에서 일반적으로 알아내지는 못합니다. OCR은 영어 모델과 소수 상품명 사전입니다. 관심 사물별 외부 상품 검색 링크를 제공하고, 아래 기존 상품 페이지 모드에서 판매처 자동 비교를 제공합니다. 주기 분석의 모든 사물에 대한 자동 판매처 가격 비교는 아직 연결하지 않았습니다. 로그인한 Instagram/YouTube 실계정은 자동 테스트하지 않았습니다. v0.3 공개 이미지 벤치마크의 평균 백엔드 RSS는 약 557MB이며 일반 웹 정확도는 별도 검증이 필요합니다.
+
+**개선 검증:** [REALTIME_VALIDATION_REPORT.md](REALTIME_VALIDATION_REPORT.md)에 변경 전후 precision/recall/F1, 지연시간, RAM, 실제 1초 캡처 결과를 기록합니다. 같은 정답 64조건에서 precision 28.3%→57.6%, 평균 처리 1.66초→0.63초였습니다. COCO128 학습 이미지 일부를 사용한 제한적 비교이며 인터넷 전체 정확도를 의미하지 않습니다.
 
 ```powershell
 .\run.cmd prepare:vision # 새 PC에서 모델·공개 테스트 이미지 최초 다운로드
 .\run.cmd check          # 타입, 린트, 단위 테스트, 확장 빌드
 .\run.cmd test:live      # 서버를 켠 상태에서 실제 Chrome 주기 캡처 30회 검증
 .\run.cmd test:startup   # 기존 서버를 끈 상태에서 자동 시작·종료·재시작 검증
+.\run.cmd test:realtime  # 기존 서버를 끈 상태: 1초 60회 / 변화 30회 / 개인정보·장애·UI
+.\run.cmd test:guards    # 별도 브라우저 DOM·DPR 가드 15종 검증
+.\run.cmd benchmark:accuracy # COCO128 준비 후 64조건 실제 모델 정확도/성능
+.\run.cmd benchmark:baseline # 고정된 v0.2 코드로 동일 조건 재실행
 .\run.cmd report         # 기존 결과 + 주기 분석 결과를 합쳐 자동 보고서 생성
 ```
 
 모델 준비 시에만 Hugging Face에 연결하며 실제 분석은 로컬에서 실행합니다. 의존성은 `npm ci`로 설치합니다. [모델 출처](https://huggingface.co/Xenova/yolos-tiny), [공개 테스트 이미지](https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/cats.jpg).
+
+정확도 벤치마크용 공개 정답 자료 최초 준비(일반 사용에는 불필요):
+
+```powershell
+Invoke-WebRequest https://github.com/ultralytics/assets/releases/download/v0.0.0/coco128.zip -OutFile .tools/test-assets/coco128.zip
+Expand-Archive -LiteralPath .tools/test-assets/coco128.zip -DestinationPath .tools/test-assets -Force
+```
+
+자료 출처: [COCO128 공식 문서](https://docs.ultralytics.com/datasets/detect/coco128/). 이미지·가중치는 `.tools`에만 두고 저장소에 포함하지 않습니다. 중간 후보 실험 기록은 `artifacts/accuracy-*.json`, 최종은 `accuracy-improved.json`, 가드/실제 캡처는 `guard-validation.json`, `realtime-validation.json`입니다.
 
 ## 바로 실행 — 현재 Windows 작업 폴더
 

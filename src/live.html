@@ -17,8 +17,8 @@ body{font:15px system-ui;max-width:1100px;margin:30px auto;padding:0 20px;backgr
   <h2>2. 분석 제어</h2>
   <p><strong id="status">연결 필요</strong> <span id="counts"></span></p>
   <button id="resume">분석 재개</button><button id="pause">일시정지</button><button id="clear">관심 데이터 삭제</button>
-  <label>캡처 간격 <select id="interval"><option value="5">5초</option><option value="10" selected>10초</option><option value="30">30초</option><option value="60">60초</option></select></label>
-  <p class="note">확장 프로그램에서 최초 1회 동의해야 Chrome 주기 캡처가 시작됩니다. 기본 10초 이상 간격이며 분석이 끝나기 전에는 다음 캡처를 하지 않습니다. 로그인·결제·메일·메시지·설정 및 입력 중인 화면은 제외합니다.</p>
+  <label>목표 캡처 간격 <select id="interval"><option value="1">1초</option><option value="2" selected>2초 (기본)</option><option value="5">5초</option><option value="10">10초</option><option value="30">30초</option><option value="60">60초</option></select></label>
+  <p class="note">기본 목표 2초, 최소 1초입니다. 분석이 오래 걸리면 끝난 뒤 다음 화면을 분석하며 밀린 캡처를 쌓지 않습니다. 로그인·결제·메일·메시지·설정 및 입력 중인 화면은 제외합니다.</p>
 </section>
 <section>
   <h2>3. 직접 테스트</h2>
@@ -26,8 +26,13 @@ body{font:15px system-ui;max-width:1100px;margin:30px auto;padding:0 20px;backgr
   <button id="sample">공개 샘플 이미지 1회 분석</button> <span id="test-result"></span>
   <p class="note">샘플 버튼은 확장 프로그램 없이 분석 엔진을 확인합니다. 실제 화면 캡처 검증은 테스트 화면을 활성 탭으로 둔 상태에서 확인하세요. 샘플에는 고양이와 리모컨이 있으며, 사람·동물은 관심 상품 집계에서 제외합니다.</p>
 </section>
-<section><h2>많이 노출된 물건</h2><p class="note">같은 사물이 한 화면에 여러 개 있어도 주기당 1회로 계산합니다. 노출은 구매 의도를 확정하지 않습니다. 검색 링크는 클릭할 때만 외부 사이트를 엽니다.</p><table><thead><tr><th>사물 / 상품 후보</th><th>관측 수</th><th>추출 방식</th><th>관련 상품 찾기</th></tr></thead><tbody id="interests"></tbody></table></section>
-<section><h2>DEBUG / 데이터 흐름</h2><p id="resources"></p><pre id="debug">대기 중</pre></section>
+<section><h2>이번 화면에서 추출한 데이터</h2><p id="frame-info">아직 분석한 화면이 없습니다.</p>
+<canvas id="positions" width="700" height="360" style="width:100%;max-width:700px;border:1px solid #ddd" aria-label="화면 내 검출 위치 도식"></canvas>
+<p class="note">위 그림은 화면 내 검출 위치 도식이며 원본 캡처 이미지가 아닙니다. 번호는 아래 추출 목록과 대응합니다. 점수는 엔진 confidence이며 실제 정답률이 아닙니다. OCR 상품명은 화면에서 언급된 이름으로, 사진 속 물건과 동일 상품인지 확인하지 못했습니다.</p>
+<table><thead><tr><th>번호 / 추출값</th><th>근거</th><th>점수</th><th>위치 / 의미</th></tr></thead><tbody id="detections"></tbody></table></section>
+<section><h2>많이 노출된 물건</h2><p class="note">같은 사물이 한 화면에 여러 개 있어도 주기당 1회로 계산합니다. 동일 이미지의 캐시 재사용은 새 추론 근거로 세지 않습니다. 두 번 이상 새로 추론된 경우 '반복 검출'로 표시하며 구매 의도를 확정하지 않습니다.</p><table><thead><tr><th>사물 / 상품 후보</th><th>관측 / 새 추론</th><th>근거 / 상태</th><th>관련 상품 찾기</th></tr></thead><tbody id="interests"></tbody></table></section>
+<section><h2>최근 30회 분석 이력</h2><button id="export">현재 결과 JSON 저장</button><p class="note">종료 후 확인하려면 먼저 저장하세요. 이미지·OCR 전체 원문·토큰을 제외한 현재 집계와 추출 근거만 다운로드합니다.</p><table><thead><tr><th>회차 / 시각</th><th>추출값</th><th>캐시 / 분석 범위</th><th>처리시간</th></tr></thead><tbody id="history"></tbody></table></section>
+<section><h2>DEBUG / 데이터 흐름</h2><p id="resources"></p><details><summary>전체 구조화 데이터 펼치기</summary><pre id="debug" style="max-height:420px;overflow:auto">대기 중</pre></details></section>
 <p class="note">분류 모델의 사물 종류는 제한적이며 정확한 브랜드·모델명 인식을 보장하지 않습니다. 개인정보 마스킹은 규칙 기반입니다. 원본 화면과 OCR 전문은 저장하지 않고, 관심 집계는 RAM에만 남기며 30분 TTL·최대 100개로 제한합니다. 프로그램을 종료하면 삭제됩니다.</p>
 <script src="/live.js"></script>
 </html>
